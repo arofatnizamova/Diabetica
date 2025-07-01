@@ -28,11 +28,26 @@ a{
     border-radius: 10px;
     opacity: 1;
 }
-select {
-  border-radius: 8px;
-  background-color: #f0f0f0;
-  color: #333;
-  border: none;
+.content{
+  position: absolute;
+  top: 0;
+  padding-top: 100px;
+  height: 100vh;
+  width: 100%;
+  right: 0;
+  background: rgba(248, 250, 252 ) ;
+}
+.card-hover {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08); /* лёгкая тень снизу */
+  border-radius: 0.75rem; /* для мягких углов, по желанию */
+  background-color: #fff;
+}
+
+.card-hover:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* тень больше и мягче */
+  transform: translateY(-1px); /* лёгкий подъём вперёд */
+  z-index: 2;
 }
 @media(max-width: 990px){
     .header-fluid {

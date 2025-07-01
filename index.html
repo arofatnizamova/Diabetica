@@ -58,63 +58,268 @@
             </div>
         </div>
     </aside>
-    <header class="position-fixed top-0 end-0 header-fluid">
-        <div class="w-100 px-4 py-2">
-            <div class="d-flex align-items-center justify-content-between">
-                <div class="">
-                    <h1 class="text-xl fw-bold text-corp mb-0 d-lg-block d-none">Diabetica</h1>
-                    <div class="d-lg-none d-block">
-                        <button class="bg-transparent border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-                            <i class="bi bi-list fs-5 opacity-75"></i>
-                        </button>
-                            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-                            <div class="offcanvas-header border-bottom">
-                                <div class="d-flex align-items-center gap-2">
-                                    <a href="#" class="py-1 px-2 rounded-3 bg-corp fw-bold text-sm text-white">D</a>
-                                    <a href="#" class="fw-bold text-xl">Diabetica</a>
-                                </div>
-                                <button type="button" class="btn-close mb-1" data-bs-dismiss="offcanvas" aria-label="Close">
-                                    <i class="fa-solid fa-chevron-left"></i>
+    <div class="position-absolute top-0 end-0 header-fluid">
+        <div class="position-relative">
+            <header class="position-sticky top-0 z-1 end-0 bg-white">
+                <div class="w-100 px-4 py-2">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="">
+                            <h1 class="text-xl fw-bold text-corp mb-0 d-lg-block d-none">Diabetica</h1>
+                            <div class="d-lg-none d-block">
+                                <button class="bg-transparent border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                                    <i class="bi bi-list fs-5 opacity-75"></i>
                                 </button>
-                            </div>
-                            <div class="offcanvas-body px-0">
-                                <div class="d-flex h-100 flex-column justify-content-between">
-                                    <div class="d-flex flex-column sidebar-content">
-                                        <nav class="d-flex mt-3 px-3 flex-column fw-light overflow-auto">
-                                            <a href="#" class="d-flex align-items-center gap-2 mb-3 link-hover p-2">
-                                                <i class="fa-solid fa-house-user fs-5"></i>
-                                                <span>Обзор</span>
-                                            </a>
-                                            <a href="#" class="d-flex align-items-center gap-2 mb-3 link-hover p-2">
-                                                <i class="fa-solid fa-chart-pie fs-5"></i>
-                                                <span>Глюкоза</span>
-                                            </a>
-                                            <a href="#" class="d-flex align-items-center gap-2 mb-3 link-hover p-2">
-                                                <i class="fa-solid fa-apple-whole fs-5"></i>
-                                                <span>Питание</span>
-                                            </a>
-                                            <a href="#" class="d-flex align-items-center gap-2 mb-3 link-hover p-2">
-                                                <i class="fa-solid fa-calendar fs-5"></i>
-                                                <span>Инсулин</span>
-                                            </a>
-                                            <a href="#" class="d-flex align-items-center gap-2 mb-3 link-hover p-2">
-                                                <i class="fa-solid fa-file fs-5"></i>
-                                                <span>Отчет</span>
-                                            </a>
-                                            <a href="#" class="d-flex align-items-center gap-2 mb-3 link-hover p-2">
-                                                <i class="fa-solid fa-heart-pulse fs-5"></i>
-                                                <span>Активность</span>
-                                            </a>
-                                            <a href="#" class="d-flex align-items-center gap-2 mb-3 link-hover p-2">
-                                                <i class="fa-solid fa-gear fs-5"></i>
-                                                <span>Настройки</span>
-                                            </a>
-                                        </nav>
+                                    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                                    <div class="offcanvas-header border-bottom">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <a href="#" class="py-1 px-2 rounded-3 bg-corp fw-bold text-sm text-white">D</a>
+                                            <a href="#" class="fw-bold text-xl">Diabetica</a>
+                                        </div>
+                                        <button type="button" class="btn-close mb-1" data-bs-dismiss="offcanvas" aria-label="Close">
+                                            <i class="fa-solid fa-chevron-left"></i>
+                                        </button>
                                     </div>
-                                    <div class="border-top p-3">
-                                        <div class="p-3 shadow rounded-4 bg-corp-light text-sm">
-                                            <p class="text-center fw-light mb-1">Школа диабета</p>
-                                            <a href="#" class="d-block text-center text-corp">Подробнее</a>
+                                    <div class="offcanvas-body px-0">
+                                        <div class="d-flex h-100 flex-column justify-content-between">
+                                            <div class="d-flex flex-column sidebar-content">
+                                                <nav class="d-flex mt-3 px-3 flex-column fw-light overflow-auto">
+                                                    <a href="#" class="d-flex align-items-center gap-2 mb-3 link-hover p-2">
+                                                        <i class="fa-solid fa-house-user fs-5"></i>
+                                                        <span>Обзор</span>
+                                                    </a>
+                                                    <a href="#" class="d-flex align-items-center gap-2 mb-3 link-hover p-2">
+                                                        <i class="fa-solid fa-chart-pie fs-5"></i>
+                                                        <span>Глюкоза</span>
+                                                    </a>
+                                                    <a href="#" class="d-flex align-items-center gap-2 mb-3 link-hover p-2">
+                                                        <i class="fa-solid fa-apple-whole fs-5"></i>
+                                                        <span>Питание</span>
+                                                    </a>
+                                                    <a href="#" class="d-flex align-items-center gap-2 mb-3 link-hover p-2">
+                                                        <i class="fa-solid fa-calendar fs-5"></i>
+                                                        <span>Инсулин</span>
+                                                    </a>
+                                                    <a href="#" class="d-flex align-items-center gap-2 mb-3 link-hover p-2">
+                                                        <i class="fa-solid fa-file fs-5"></i>
+                                                        <span>Отчет</span>
+                                                    </a>
+                                                    <a href="#" class="d-flex align-items-center gap-2 mb-3 link-hover p-2">
+                                                        <i class="fa-solid fa-heart-pulse fs-5"></i>
+                                                        <span>Активность</span>
+                                                    </a>
+                                                    <a href="#" class="d-flex align-items-center gap-2 mb-3 link-hover p-2">
+                                                        <i class="fa-solid fa-gear fs-5"></i>
+                                                        <span>Настройки</span>
+                                                    </a>
+                                                </nav>
+                                            </div>
+                                            <div class="border-top p-3">
+                                                <div class="p-3 shadow rounded-4 bg-corp-light text-sm">
+                                                    <p class="text-center fw-light mb-1">Школа диабета</p>
+                                                    <a href="#" class="d-block text-center text-corp">Подробнее</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="">
+                                <button class="btn d-flex align-items-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                                    <i class="bi bi-person-circle me-2 opacity-75"></i> <span class="fw-medium text-sm">Войти</span>
+                                </button>
+                                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                                    <div class="offcanvas-header pb-0">
+                                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </button>
+                                    </div>
+                                    <div class="offcanvas-body pt-0 px-4 text-sm">
+                                        <h5 class="text-lg fw-semibold">Вход в систему</h5>
+                                        <p class="opacity-75">Выберите тип учетной записи и введите данные для входа</p>
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label fw-semibold">Тип пользователя</label>
+                                                <select class="form-select text-sm" aria-label="Default select example">
+                                                    <option selected>Пациент</option>
+                                                    <option value="1">Врач</option>
+                                                    <option value="2">Родственик пациента</option>
+                                                    <option value="3">Исследователь</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label fw-semibold">E-mail</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="example@email.ru" aria-describedby="emailHelp">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleInputPassword1" class="form-label fw-semibold">Пароль</label>
+                                                <input type="password" class="form-control" id="exampleInputPassword1">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary text-sm w-100">Войти</button>
+                                        </form>
+                                        <p class="opacity-75 mt-3 text-center">Нет аккаунта? <a href="#" class="text-corp">Зарегестрироваться</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="bg-transparent border-0 position-relative">
+                                            <i class="bi bi-bell"></i>
+                                            <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                                                <span class="visually-hidden">New alerts</span>
+                                            </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="content">
+                <div class="container">
+                    <!-- DashboardHeader -->
+                    <div id="DashboardHeader">
+                        <div class="row gy-4">
+                            <div class="col-xl-4 col-lg-5">
+                                <div class="w-100">
+                                    <h2 class="text-2xl fw-bold mb-0">
+                                        Добро пожаловать, Дмитрий
+                                    </h2>
+                                    <p class="opacity-75 fw-light">вторник, 1 июля</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-8 col-lg-7">
+                                <div class="w-100 d-flex flex-wrap justify-content-xl-end gap-3 align-items-center">
+                                    <div class="">
+                                        <button class="btn btn-white text-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight-2" aria-controls="offcanvasRight-2">
+                                            <i class="fa-solid fa-arrow-up-from-bracket me-1"></i>
+                                            <span>Загрузить данные</span>
+                                        </button>
+                                            
+                                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-2" aria-labelledby="offcanvasRightLabel">
+                                            <div class="offcanvas-header pb-0">
+                                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                                                    <i class="fa-solid fa-xmark"></i>
+                                                </button>
+                                            </div>
+                                            <div class="offcanvas-body pt-0 px-4 text-sm">
+                                                <h5 class="text-lg fw-semibold">Импорт данных</h5>
+                                                <p class="opacity-75">Загрузите файл с устройства или введите данные вручную</p>
+                                                <form>
+                                                    <div class="mb-3">
+                                                        <label for="exampleInputEmail1" class="form-label fw-semibold">Тип данных</label>
+                                                        <select class="form-select text-sm" aria-label="Default select example">
+                                                            <option selected>Глюкоза</option>
+                                                            <option value="1">Инсулин</option>
+                                                            <option value="2">Питание</option>
+                                                            <option value="3">Активность</option>
+                                                        </select>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary w-100 text-sm">Сохранить данные</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <button class="btn btn-white text-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight-3" aria-controls="offcanvasRight-3">
+                                            <i class="fa-solid fa-plus me-1"></i>
+                                            <span>Добавить показатель</span></button>
+                                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-3" aria-labelledby="offcanvasRightLabel">
+                                                <div class="offcanvas-header">
+                                                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                                </div>
+                                                <div class="offcanvas-body">
+                                                    ...
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn btn-primary text-sm">
+                                        <i class="fa-solid fa-plus me-1"></i>
+                                        <span>Запись</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- HealthToolsPanel -->
+                    <div id="HealthToolsPanel">
+                        <div class="d-flex pt-3 align-items-center text-sm flex-wrap gap-3">
+                            <a href="#" class="btn btn-white text-sm">
+                                <i class="bi bi-book me-1"></i>
+                                <span>Школа диабета</span>
+                            </a>
+                            <a href="#" class="btn btn-white text-sm">
+                                <i class="bi bi-calculator me-1"></i>
+                                <span>Хлебные единицы</span>
+                            </a>
+                            <a href="#" class="btn btn-white text-sm">
+                                <i class="fa-solid fa-apple-whole me-1"></i>
+                                <span>Питание</span>
+                            </a>
+                            <a href="#" class="btn btn-white text-sm">
+                                <i class="bi bi-robot me-1"></i>
+                                <span>Спросить AI-ассистента</span>
+                            </a>
+                            <a href="#" class="btn btn-white text-sm">
+                                <i class="bi bi-exclamation-triangle me-1"></i>
+                                <span>Анализ рисков</span>
+                            </a>
+                            <a href="#" class="btn btn-white text-sm">
+                                <i class="bi bi-camera-video me-1"></i>
+                                <span>Телемедицина</span>
+                            </a>
+                            <a href="#" class="btn btn-white text-sm">
+                                <i class="fa-regular fa-bell me-1"></i>
+                                <span>Напоминания</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- MetricsCards -->
+                    <div id="MetricsCards">
+                        <div class="pt-3">
+                            <div class="row gx-sm-3 gx-0 gy-3">
+                                <div class="col-xl-3 col-sm-6">
+                                    <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover text-sm d-flex justify-content-between">
+                                        <div>
+                                            <p class="opacity-75 fw-semibold mb-1">Текущая глюкоза</p>
+                                            <p class="text-2xl fw-bold">6 ммоль/л</p>
+                                            <p class="mb-0 text-success"><i class="bi bi-arrow-down me-1"></i> В норме</p>
+                                        </div>
+                                        <div class="text-success bg-green p-2 rounded-3 h-fit-content">
+                                            <i class="bi bi-pie-chart fs-5"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-sm-6">
+                                    <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover text-sm d-flex justify-content-between">
+                                        <div>
+                                            <p class="opacity-75 fw-semibold mb-1">Средняя глюкоза</p>
+                                            <p class="text-2xl fw-bold">6.3 ммоль/л</p>
+                                            <p class="mb-0 text-primary"><i class="bi bi-arrow-down me-1"></i> -0.4 от вчера</p>
+                                        </div>
+                                        <div class="text-primary bg-blue p-2 rounded-3 h-fit-content">
+                                            <i class="bi bi-pie-chart fs-5"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-sm-6">
+                                    <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover text-sm d-flex justify-content-between">
+                                        <div>
+                                            <p class="opacity-75 fw-semibold mb-1">Углеводы сегодня</p>
+                                            <p class="text-2xl fw-bold">124 г</p>
+                                        </div>
+                                        <div class="text-warning bg-yellow p-2 rounded-3 h-fit-content">
+                                            <i class="fa-solid fa-apple-whole fs-5"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-sm-6">
+                                    <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover text-sm d-flex justify-content-between">
+                                        <div>
+                                            <p class="opacity-75 fw-semibold mb-1">Активность</p>
+                                            <p class="text-2xl fw-bold">3,245 шагов</p>
+                                            <p class="mb-0 text-primary"><i class="bi bi-arrow-up me-1"></i> 23% от цели</p>
+                                        </div>
+                                        <div class="text-primary bg-blue p-2 rounded-3 h-fit-content">
+                                            <i class="bi bi-activity fs-5"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -122,54 +327,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex align-items-center gap-3">
-                    <div class="">
-                        <button class="btn d-flex align-items-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                            <i class="bi bi-person-circle me-2 opacity-75"></i> <span class="fw-medium text-sm">Войти</span>
-                        </button>
-                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                            <div class="offcanvas-header pb-0">
-                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
-                                    <i class="fa-solid fa-xmark"></i>
-                                </button>
-                            </div>
-                            <div class="offcanvas-body pt-0 px-4 text-sm">
-                                <h5 class="text-lg fw-semibold">Вход в систему</h5>
-                                <p class="opacity-75">Выберите тип учетной записи и введите данные для входа</p>
-                                <form>
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label fw-semibold">Тип пользователя</label>
-                                        <select class="form-select text-sm" aria-label="Default select example">
-                                            <option selected>Пациент</option>
-                                            <option value="1">Врач</option>
-                                            <option value="2">Родственик пациента</option>
-                                            <option value="3">Исследователь</option>
-                                        </select>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label fw-semibold">E-mail</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="example@email.ru" aria-describedby="emailHelp">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label fw-semibold">Пароль</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1">
-                                    </div>
-                                    <button type="submit" class="btn btn-primary w-100">Войти</button>
-                                </form>
-                                <p class="opacity-75 mt-3 text-center">Нет аккаунта? <a href="#" class="text-corp">Зарегестрироваться</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <button type="button" class="bg-transparent border-0 position-relative">
-                                    <i class="bi bi-bell"></i>
-                                    <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
-                                        <span class="visually-hidden">New alerts</span>
-                                    </span>
-                    </button>
-                </div>
             </div>
         </div>
-    </header>
+    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

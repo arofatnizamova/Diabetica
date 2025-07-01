@@ -7,7 +7,18 @@
 .bg-corp-light{
     background: var(--color-bg);
 }
-
+.bg-green{
+    background: var(--color-green);
+}
+.bg-blue{
+    background: var(--color-blue);
+}
+.bg-yellow{
+    background: var(--color-yellow);
+}
 .h-100vh{
     height: 100vh;
+}
+.h-fit-content{
+    height: fit-content;
 }

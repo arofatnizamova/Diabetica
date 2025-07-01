@@ -1,4 +1,7 @@
 :root{
     --color-corp: rgb(34, 83 ,255);
     --color-bg: rgb(237, 245, 255 );
+    --color-green: rgb(220, 252, 231);
+    --color-blue: rgb(219, 234, 254);
+    --color-yellow: rgb(254, 243, 199);
 }
