@@ -1,0 +1,26 @@
+.btn{
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(223, 229, 240, 1);
+    border-radius: calc(.75rem - 2px);
+}
+.btn:hover{
+    background: rgba(232, 240, 248, 0.5);
+    border: 1px solid rgba(223, 229, 240, 1);
+}
+.btn-primary{
+    background: var(--color-corp);
+    border: 0;
+}
+.btn-primary:hover{
+    border: none;
+    background: rgba(34, 82, 255, 0.614);
+}
+.btn-close{
+    background: none;
+}
+.form-control::placeholder{
+    font-size: .875rem;
+}
+.offcanvas.offcanvas-start {
+    width: 255px;
+}

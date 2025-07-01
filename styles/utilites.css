@@ -1,0 +1,13 @@
+.text-corp{
+    color: var(--color-corp);
+}
+.bg-corp{
+    background: var(--color-corp);
+}
+.bg-corp-light{
+    background: var(--color-bg);
+}
+
+.h-100vh{
+    height: 100vh;
+}
