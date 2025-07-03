@@ -27,6 +27,9 @@
 .offcanvas.offcanvas-start {
     width: 255px;
 }
+.form-control {
+    font-size: 0.8rem;
+}
 @media (min-width: 1400px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
         max-width: 1200px;

@@ -212,6 +212,34 @@
                                                             <option value="3">Активность</option>
                                                         </select>
                                                     </div>
+                                                    <div class="mb-3">
+                                                        <label for="exampleInputEmail1" class="form-label fw-semibold">Загрузка файла</label>
+                                                        <div class="file-upload mt-2" id="file-drop-area">
+                                                            <input type="file" id="fileInput" class="file-input" />
+                                                            <div class="upload-placeholder">
+                                                                <i class="bi bi-file-earmark-arrow-up fs-2 text-gray"></i>
+                                                                <p class="mt-2 text-sm">Перетащите файл или нажмите для выбора</p>
+                                                                <label for="fileInput" class="upload-button text-sm">Выбрать файл</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="exampleInputEmail1" class="form-label fw-semibold">Или введите данные вручную</label>
+                                                        <div class="row gx-0">
+                                                            <div class="col-6">
+                                                                <div class="w-100 px-1">
+                                                                    <label for="exampleInputEmail1" class="form-label text-xs">Значение (ммоль/л)</label>
+                                                                    <input type="number" class="form-control" value="5.5" min="0">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div class="w-100 px-1">
+                                                                    <label for="exampleInputEmail1" class="form-label text-xs">Дата и время</label>
+                                                                    <input type="datetime-local" class="form-control" value="5.5" min="0">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                     <button type="submit" class="btn btn-primary w-100 text-sm">Сохранить данные</button>
                                                 </form>
                                             </div>
@@ -242,14 +270,136 @@
                     <!-- HealthToolsPanel -->
                     <div id="HealthToolsPanel">
                         <div class="d-flex pt-3 align-items-center text-sm flex-wrap gap-3">
-                            <a href="#" class="btn btn-white text-sm">
-                                <i class="bi bi-book me-1"></i>
-                                <span>Школа диабета</span>
-                            </a>
-                            <a href="#" class="btn btn-white text-sm">
-                                <i class="bi bi-calculator me-1"></i>
-                                <span>Хлебные единицы</span>
-                            </a>
+                            <div>
+                                <button class="btn btn-white text-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight-4" aria-controls="offcanvasRight-4">
+                                    <i class="bi bi-book me-1"></i>
+                                    <span>Школа диабета</span>
+                                </button>
+                                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-4" aria-labelledby="offcanvasRightLabel">
+                                    <div class="offcanvas-header pb-0">
+                                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </button>
+                                    </div>
+                                    <div class="offcanvas-body pt-0 px-4 text-sm">
+                                        <h5 class="text-lg fw-semibold">Школа диабета</h5>
+                                        <p class="opacity-75">Образовательные материалы и курсы по управлению диабетом</p>
+                                        <div class="bg-corp-light d-flex gap-3 align-items-center rounded-3 card-progress p-3 mb-3 card-hover text-sm">
+                                            <i class="fa-solid fa-medal text-corp fs-3"></i>
+                                            <div class="">
+                                                <p class="text-md fw-semibold">Общий прогресс обучения</p>
+                                                <div class="progress-line mt-1 mb-1">
+                                                    <div class="progress-line-inside">
+                                                    </div>
+                                                </div>
+                                                <p class="mb-0 text-xs text-gray" data-percent="40"> <span>2</span> из <span>5 </span>уроков начаты</p>
+                                            </div>
+                                        </div>
+                                        <h5 class="text-lg fw-semibold">Доступные курсы</h5>
+                                        <div class="bg-white rounded-3 card-progress p-3 mb-3 card-hover text-sm">
+                                            <h4 class="fw-semibold text-sm">Основы диабета</h4>
+                                            <p class="text-gray text-sm">Что такое диабет, типы, причины и симптомы</p>
+                                            <div class="d-flex text-gray justify-content-between">
+                                                <p class="mb-0 text-xs"> <span>4</span> из <span>5 </span>уроков</p>
+                                                <span class="text-xs" data-percent="80">80%</span>
+                                            </div>
+                                            <div class="progress-line mt-1 mb-3">
+                                                <div class="progress-line-inside">
+                                                </div>
+                                            </div>
+                                            <a href="#" class="btn btn-primary text-sm">
+                                                <span>Продолжить</span>
+                                            </a>
+                                        </div>
+                                        <div class="bg-white rounded-3 card-progress p-3 mb-3 card-hover text-sm">
+                                            <h4 class="fw-semibold text-sm">Питание при диабете</h4>
+                                            <p class="text-gray text-sm">Хлебные единицы, гликемический индекс, составление меню</p>
+                                            <div class="d-flex text-gray justify-content-between">
+                                                <p class="mb-0 text-xs"> <span>2</span> из <span>8 </span>уроков</p>
+                                                <span class="text-xs" data-percent="30">30%</span>
+                                            </div>
+                                            <div class="progress-line mt-1 mb-3">
+                                                <div class="progress-line-inside">
+                                                </div>
+                                            </div>
+                                            <a href="#" class="btn btn-primary text-sm">
+                                                <span>Продолжить</span>
+                                            </a>
+                                        </div>
+                                        <div class="bg-white rounded-3 card-progress p-3 mb-3 card-hover text-sm">
+                                            <h4 class="fw-semibold text-sm">Инсулинотерапия</h4>
+                                            <p class="text-gray text-sm">Типы инсулина, подсчет дозировки, техника введения</p>
+                                            <div class="d-flex text-gray justify-content-between">
+                                                <p class="mb-0 text-xs"> <span>0</span> из <span>6 </span>уроков</p>
+                                                <span class="text-xs" data-percent="0">0%</span>
+                                            </div>
+                                            <div class="progress-line mt-1 mb-3">
+                                                <div class="progress-line-inside">
+                                                </div>
+                                            </div>
+                                            <a href="#" class="btn btn-white text-sm">
+                                                <span>Начать обучение</span>
+                                            </a>
+                                        </div>
+                                        <div class="bg-white rounded-3 card-progress p-3 mb-3 card-hover text-sm">
+                                            <h4 class="fw-semibold text-sm">Самоконтроль</h4>
+                                            <p class="text-gray text-sm">Как правильно измерять уровень глюкозы, вести дневник</p>
+                                            <div class="d-flex text-gray justify-content-between">
+                                                <p class="mb-0 text-xs"> <span>2</span> из <span>4 </span>уроков</p>
+                                                <span class="text-xs" data-percent="50">50%</span>
+                                            </div>
+                                            <div class="progress-line mt-1 mb-3">
+                                                <div class="progress-line-inside">
+                                                </div>
+                                            </div>
+                                            <a href="#" class="btn btn-primary text-sm">
+                                                <span>Продолжить</span>
+                                            </a>
+                                        </div>
+                                        <a href="#" class="text-sm mt-3  d-block text-center hovered-link">Смотреть все курсы</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btn-white text-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight-4" aria-controls="offcanvasRight-4">
+                                    <i class="bi bi-calculator me-1"></i>
+                                    <span>Хлебные единицы</span>
+                                </button>
+                                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-4" aria-labelledby="offcanvasRightLabel">
+                                    <div class="offcanvas-header pb-0">
+                                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </button>
+                                    </div>
+                                    <div class="offcanvas-body pt-0 px-4 text-sm">
+                                        <h5 class="text-lg fw-semibold">Калькулятор хлебных единиц</h5>
+                                        <p class="opacity-75">Рассчитайте углеводы и хлебные единицы в продуктах</p>
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label fw-semibold">Категория продукта</label>
+                                                <select class="form-select text-sm" aria-label="Default select example">
+                                                    <option selected="">Все продукты</option>
+                                                    <option value="1">Хлебобулочные</option>
+                                                    <option value="2">Крупы</option>
+                                                    <option value="3">Овощи</option>
+                                                    <option value="4">Фрукты</option>
+                                                    <option value="5">Молочные</option>
+                                                    <option value="6">Сладости</option>
+                                                </select>
+                                                <label for="product" class="form-label mt-3 fw-semibold">Продукт</label>
+                                                <select class="form-select text-sm" aria-label="Default select example">
+                                                    <option selected="">Выберите продукт</option>
+                                                    <option value="1">Хлебобулочные</option>
+                                                </select>
+                                                <label for="product" class="form-label mt-3 fw-semibold">Вес (грамм)</label>
+                                                <input type="number" class="form-control" value="100" min="1">
+                                            </div>
+                                            <button type="submit" disabled class="btn btn-primary w-100 text-sm">Расчитать</button>
+                                        </form>
+                                        <a href="#" class="text-sm mt-3  d-block text-center hovered-link">Справочник продуктов и ХЕ</a>
+                                    </div>
+                                </div>
+                            </div>
                             <a href="#" class="btn btn-white text-sm">
                                 <i class="fa-solid fa-apple-whole me-1"></i>
                                 <span>Питание</span>
@@ -470,7 +620,7 @@
     </div>
     
 
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script type="module" src="scripts/main.js"></script>

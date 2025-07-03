@@ -34,3 +34,6 @@
 .h-fit-content{
     height: fit-content;
 }
+.bordered-corp{
+    border: 1px solid rgb(224, 237,255);
+}

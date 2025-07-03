@@ -20,13 +20,12 @@ a{
 }
 .link-hover{
     transition: all 0.3s ease;
-    opacity: 0.8;
+    color: var(--color-gray);
 }
 .link-hover:hover{
     background: rgba(241, 245, 249, 1);
     color: rgb(34, 83, 255);
     border-radius: 10px;
-    opacity: 1;
 }
 .content{
   position: absolute;
@@ -41,7 +40,6 @@ a{
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08); /* лёгкая тень снизу */
   border-radius: 0.75rem; /* для мягких углов, по желанию */
-  background-color: #fff;
 }
 
 .card-hover:hover {
@@ -62,6 +60,56 @@ a{
 .meal-img{
   width: 64px;
   height: 64px;
+}
+.file-upload {
+  border: 2px dashed #d0d5dd;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  width: 340px;
+  font-family: sans-serif;
+  transition: border-color 0.3s;
+  position: relative;
+}
+.file-upload.dragover {
+  border-color: #4c9aff;
+  background-color: #f0faff;
+}
+
+.upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-icon {
+  width: 40px;
+  margin-bottom: 12px;
+  opacity: 0.6;
+}
+
+.upload-button {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 1px solid #d0d5dd;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.file-input {
+  display: none;
+}
+.progress-line{
+  background: rgb(241, 245, 249);
+  height: 6px;
+  width: 100%;
+  border-radius: 10px;
+}
+.progress-line-inside{
+  background: #4c9aff;
+  height: 6px;
+  border-radius: 10px;
 }
 @media(max-width: 990px){
     .header-fluid {

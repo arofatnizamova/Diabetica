@@ -5,7 +5,7 @@ export function renderGlucoseChart(containerId, labels, dataPoints) {
       type: 'line',
       height: 200,
       toolbar: { show: false },
-      zoom: { enabled: false }
+      zoom: { enabled: false },
     },
     responsive: [
     {
