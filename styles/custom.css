@@ -32,7 +32,7 @@ a{
   position: absolute;
   top: 0;
   padding-top: 100px;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   right: 0;
   background: rgba(248, 250, 252 ) ;
@@ -48,6 +48,20 @@ a{
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* тень больше и мягче */
   transform: translateY(-1px); /* лёгкий подъём вперёд */
   z-index: 2;
+}
+.hovered-link{
+  color: rgb(79, 136, 255);
+  transition: all 0.3s ease;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.hovered-link:hover{
+  background: #f1f5f9;
+  color: rgb(34, 83, 255);
+}
+.meal-img{
+  width: 64px;
+  height: 64px;
 }
 @media(max-width: 990px){
     .header-fluid {

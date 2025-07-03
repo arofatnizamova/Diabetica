@@ -1,6 +1,15 @@
 .text-corp{
     color: var(--color-corp);
 }
+.text-gray{
+    color: var(--color-gray);
+}
+.text-dark-custom{
+    color: var(--color-dark);
+}
+.text-green{
+    color: rgb(34, 197,94);
+}
 .bg-corp{
     background: var(--color-corp);
 }
@@ -15,6 +24,9 @@
 }
 .bg-yellow{
     background: var(--color-yellow);
+}
+.bg-smoke{
+    background: rgb(148, 163, 184);
 }
 .h-100vh{
     height: 100vh;
