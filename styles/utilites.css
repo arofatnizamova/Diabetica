@@ -13,6 +13,9 @@
 .text-dark-blue{
     color: var(--color-dark-blue);
 }
+.text-smoke{
+    color: var(--color-text);
+}
 .bg-corp{
     background: var(--color-corp);
 }
