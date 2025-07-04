@@ -60,7 +60,7 @@
     </aside>
     <div class="position-absolute h-100 top-0 end-0 header-fluid">
         <div class="position-relative h-100">
-            <header class="position-sticky border-bottom top-0 z-1 end-0 bg-white">
+            <header class="position-fixed border-bottom top-0 header-fluid z-1 end-0 bg-white">
                 <div class="w-100 px-4 py-2">
                     <div class="d-flex align-items-center justify-content-between">
                         <div class="">
@@ -172,7 +172,7 @@
                     </div>
                 </div>
             </header>
-            <div class="content">
+            <div class="content pb-5">
                 <div class="container">
                     <!-- DashboardHeader -->
                     <div id="DashboardHeader">
@@ -489,7 +489,7 @@
                         </div>
                     </div>
                     <div class="row mt-4 gx-lg-3 gx-0 gy-4">
-                        <div class="col-lg-8">
+                        <div class="col-xl-8">
                             <!-- MealEntryCardList -->
                             <div id="MealEntryCardList" class="w-100">
                                 <div class="d-flex mb-4 align-items-center justify-content-between">
@@ -610,6 +610,153 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4">
+                            <!-- AI-prediction -->
+                            <div class="w-100 border p-4 bg-white rounded-4">
+                                <h3 class="text-2xl fw-semibold mb-4"><i class="bi bi-exclamation-triangle me-2 text-corp fs-5"></i>AI-Прогноз рисков</h3>
+                                <div class="bg-main rounded-4 p-3 card-progress ">
+                                    <p class="text-md fw-semibold mb-0">Общий риск осложнений<span class="text-gray text-xs fw-normal ms-2"><i class="bi bi-graph-down-arrow me-1 text-green"></i>Снижается</span></p>
+                                    <div class="progress-line my-2">
+                                        <div class="progress-line-inside">
+                                        </div>
+                                    </div>
+                                    <span class="text-sm text-gray" data-percent="32">32% - Умеренный риск</span>
+                                </div>
+                                <h6 class="mt-4 mb-3 fw-semibold text-md text-dark-custom">Прогноз по категориям:</h6>
+                                <div class="bg-green rounded-4 p-3 card-progress mb-3">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <p class="text-md fw-semibold mb-0">Гипогликемия</p>
+                                        <span class="text-sm text-green fw-semibold" data-percent="25">25%</span>
+                                    </div>
+                                    <div class="progress-line my-2">
+                                        <div class="progress-line-inside">
+                                        </div>
+                                    </div>
+                                    <span class="text-gray text-xs">
+                                        Низкий риск в ближайшие 4 часа
+                                    </span>
+                                </div>
+                                <div class="bg-yellow rounded-4 p-3 card-progress mb-3">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <p class="text-md fw-semibold mb-0">Гипергликемия</p>
+                                        <span class="text-sm text-warning fw-semibold" data-percent="60">60%</span>
+                                    </div>
+                                    <div class="progress-line my-2">
+                                        <div class="progress-line-inside">
+                                        </div>
+                                    </div>
+                                    <span class="text-gray text-xs">
+                                        Средний риск после еды
+                                    </span>
+                                </div>
+                                <div class="bg-green rounded-4 p-3 card-progress mb-3">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <p class="text-md fw-semibold mb-0">Нейропатия</p>
+                                        <span class="text-sm text-green fw-semibold" data-percent="15">15%</span>
+                                    </div>
+                                    <div class="progress-line my-2">
+                                        <div class="progress-line-inside">
+                                        </div>
+                                    </div>
+                                    <span class="text-gray text-xs">
+                                        Хороший контроль глюкозы
+                                    </span>
+                                </div>
+                                <div class="bg-yellow rounded-4 p-3 card-progress mb-3">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <p class="text-md fw-semibold mb-0">Ретинопатия</p>
+                                        <span class="text-sm text-warning fw-semibold" data-percent="30">30%</span>
+                                    </div>
+                                    <div class="progress-line my-2">
+                                        <div class="progress-line-inside">
+                                        </div>
+                                    </div>
+                                    <span class="text-gray text-xs">
+                                        Рекомендован осмотр окулиста
+                                    </span>
+                                </div>
+                                <div class="rounded-4 p-3 bg-corp-light text-dark-blue">
+                                    <h6 class="text-md fw-semibold"><i class="bi bi-robot me-2 fs-5"></i>AI Рекомендации:</h6>
+                                    <ul class="text-sm list-unstyled fw-light ps-0 mb-0">
+                                        <li>• Увеличьте физическую активность на 20 мин/день</li>
+                                        <li>• Контролируйте углеводы в вечернее время</li>
+                                        <li>• Запланируйте визит к офтальмологу</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Reminders -->
+                            <div class="w-100 border p-4 bg-white rounded-4 mt-4">
+                                <h3 class="text-2xl fw-semibold mb-4"><i class="fa-solid fa-bell me-2 text-corp fs-5"></i>Напоминания</h3>
+                                <div class="border rounded-4 p-3 mb-3 d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span>💊</span>
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <p class="text-md fw-semibold text-dark-custom mb-1">Инсулин короткий</p>
+                                            <span class="text-sm text-gray fw-light"><i class="fa-regular fa-clock me-1"></i>08:00</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" value="" id="checkNativeSwitch" switch>
+                                        </div>
+                                        <button class="close-btn-custom"><i class="fa-solid fa-xmark text-gray"></i></button>
+                                    </div>
+                                </div>
+                                <div class="border rounded-4 p-3 mb-3 d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span>🩸</span>
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <p class="text-md fw-semibold text-dark-custom mb-1">Измерить сахар</p>
+                                            <span class="text-sm text-gray fw-light"><i class="fa-regular fa-clock me-1"></i>13:00</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" value="" id="checkNativeSwitch" switch>
+                                        </div>
+                                        <button class="close-btn-custom"><i class="fa-solid fa-xmark text-gray"></i></button>
+                                    </div>
+                                </div>
+                                <div class="border rounded-4 p-3 mb-3 d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span>🍽️</span>
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <p class="text-md fw-semibold text-dark-custom mb-1">Обед</p>
+                                            <span class="text-sm text-gray fw-light"><i class="fa-regular fa-clock me-1"></i>13:00</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" value="" id="checkNativeSwitch" switch>
+                                        </div>
+                                        <button class="close-btn-custom"><i class="fa-solid fa-xmark text-gray"></i></button>
+                                    </div>
+                                </div>
+                                <button class="btn btn-white text-sm w-100 border-dashed" type="button">
+                                    <i class="fa-solid fa-plus me-2"></i>
+                                    <span>Добавить напоминание</span>
+                                </button>
+                                <div class="border-dashed p-3 rounded-3 mt-4">
+                                    <form>
+                                        <input type="text" class="form-control mb-3" placeholder="Название напоминания">
+                                        <input type="time" class="form-control mb-3">
+                                        <select name="" class="form-select text-sm mb-3" id="">
+                                            <option value="2">Лекарство</option>
+                                            <option value="3">Глюкоза</option>
+                                            <option value="4">Питание</option>
+                                        </select>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <button type="submit" class="btn btn-primary text-sm">
+                                                <span>Добавить</span>
+                                            </button>
+                                            <button class="btn d-flex align-items-center">
+                                                <span class="fw-medium text-sm">Отмена</span>
+                                            </button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>

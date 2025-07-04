@@ -10,6 +10,9 @@
 .text-green{
     color: rgb(34, 197,94);
 }
+.text-dark-blue{
+    color: var(--color-dark-blue);
+}
 .bg-corp{
     background: var(--color-corp);
 }
@@ -28,6 +31,9 @@
 .bg-smoke{
     background: rgb(148, 163, 184);
 }
+.bg-main{
+    background: var(--main-bg);
+}
 .h-100vh{
     height: 100vh;
 }
@@ -36,4 +42,7 @@
 }
 .bordered-corp{
     border: 1px solid rgb(224, 237,255);
+}
+.border-dashed {
+    border: 1px dashed rgba(223, 229, 240, 1); 
 }

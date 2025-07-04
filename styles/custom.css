@@ -111,6 +111,16 @@ a{
   height: 6px;
   border-radius: 10px;
 }
+.close-btn-custom{
+  border: none;
+  background: transparent;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.close-btn-custom:hover{
+  background: var(--main-bg);
+}
 @media(max-width: 990px){
     .header-fluid {
         width: 100%;
