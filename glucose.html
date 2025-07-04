@@ -163,10 +163,10 @@
                                 </div>
                             </div>
                             <button type="button" class="bg-transparent border-0 position-relative">
-                                            <i class="bi bi-bell"></i>
-                                            <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
-                                                <span class="visually-hidden">New alerts</span>
-                                            </span>
+                                <i class="bi bi-bell"></i>
+                                <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                                    <span class="visually-hidden">New alerts</span>
+                                </span>
                             </button>
                         </div>
                     </div>
@@ -180,102 +180,145 @@
                             <div class="col-lg-5">
                                 <div class="w-100">
                                     <h2 class="text-2xl fw-bold mb-0">
-                                        Анализ рисков
+                                        Мониторинг глюкозы
                                     </h2>
-                                    <p class="fw-light text-gray">AI-прогнозирование и оценка рисков осложнений</p>
+                                    <p class="text-gray fw-light">Отслеживайте и анализируйте уровень глюкозы</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="w-100 d-flex flex-wrap justify-content-xl-end gap-3 align-items-center">
+                                    <button class="btn btn-white text-sm" type="button">
+                                        <i class="bi bi-calendar-event me-1"></i>
+                                        <span class="fw-semibold">История</span>
+                                    </button>
+                                    <button class="btn btn-primary text-sm" type="button">
+                                        <i class="fa-solid fa-plus me-1"></i>
+                                        <span>Новая запись</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- AI-prediction -->
-                    <div class="row gx-lg-4 gx-0">
-                        <div class="col-xl-8">
-                            <div class="w-100 border p-4 bg-white rounded-4">
-                                <h3 class="text-2xl fw-semibold mb-4"><i class="bi bi-exclamation-triangle me-2 text-corp fs-5"></i>AI-Прогноз рисков</h3>
-                                <div class="bg-main rounded-4 p-3 card-progress ">
-                                    <p class="text-md fw-semibold mb-0">Общий риск осложнений<span class="text-gray text-xs fw-normal ms-2"><i class="bi bi-graph-down-arrow me-1 text-green"></i>Снижается</span></p>
-                                    <div class="progress-line my-2">
-                                        <div class="progress-line-inside">
+                    <!-- MetricsCards -->
+                    <div id="MetricsCards">
+                        <div class="pt-3">
+                            <div class="row gx-sm-3 gx-0 gy-3">
+                                <div class="col-xl-3 col-sm-6">
+                                    <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover text-sm d-flex justify-content-between">
+                                        <div>
+                                            <p class="opacity-75 fw-semibold mb-1">Средняя за неделю</p>
+                                            <p class="text-2xl fw-bold mb-0">6 ммоль/л</p>
+                                        </div>
+                                        <div class="text-primary bg-blue p-2 rounded-3 h-fit-content">
+                                            <i class="bi bi-pie-chart fs-5"></i>
                                         </div>
                                     </div>
-                                    <span class="text-sm text-gray" data-percent="32">32% - Умеренный риск</span>
                                 </div>
-                                <h6 class="mt-4 mb-3 fw-semibold text-md text-dark-custom">Прогноз по категориям:</h6>
-                                <div class="bg-green rounded-4 p-3 card-progress mb-3">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <p class="text-md fw-semibold mb-0">Гипогликемия</p>
-                                        <span class="text-sm text-green fw-semibold" data-percent="25">25%</span>
-                                    </div>
-                                    <div class="progress-line my-2">
-                                        <div class="progress-line-inside">
+                                <div class="col-xl-3 col-sm-6">
+                                    <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover text-sm d-flex justify-content-between">
+                                        <div>
+                                            <p class="opacity-75 fw-semibold mb-1">Минимум за неделю</p>
+                                            <p class="text-2xl fw-bold mb-0" >5.3 ммоль/л</p>
+                                        </div>
+                                        <div class="text-success bg-green p-2 rounded-3 h-fit-content">
+                                            <i class="bi bi-pie-chart fs-5"></i>
                                         </div>
                                     </div>
-                                    <span class="text-gray text-xs">
-                                        Низкий риск в ближайшие 4 часа
-                                    </span>
                                 </div>
-                                <div class="bg-yellow rounded-4 p-3 card-progress mb-3">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <p class="text-md fw-semibold mb-0">Гипергликемия</p>
-                                        <span class="text-sm text-warning fw-semibold" data-percent="60">60%</span>
-                                    </div>
-                                    <div class="progress-line my-2">
-                                        <div class="progress-line-inside">
+                                <div class="col-xl-3 col-sm-6">
+                                    <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover text-sm d-flex justify-content-between">
+                                        <div>
+                                            <p class="opacity-75 fw-semibold mb-1">Максимум за неделю</p>
+                                            <p class="text-2xl fw-bold mb-0" >7.3 ммоль/л</p>
+                                        </div>
+                                        <div class="text-warning bg-yellow p-2 rounded-3 h-fit-content">
+                                            <i class="bi bi-pie-chart fs-5"></i>
                                         </div>
                                     </div>
-                                    <span class="text-gray text-xs">
-                                        Средний риск после еды
-                                    </span>
                                 </div>
-                                <div class="bg-green rounded-4 p-3 card-progress mb-3">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <p class="text-md fw-semibold mb-0">Нейропатия</p>
-                                        <span class="text-sm text-green fw-semibold" data-percent="15">15%</span>
-                                    </div>
-                                    <div class="progress-line my-2">
-                                        <div class="progress-line-inside">
+                                <div class="col-xl-3 col-sm-6">
+                                    <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover text-sm d-flex justify-content-between">
+                                        <div>
+                                            <p class="opacity-75 fw-semibold mb-1">Количество измерений</p>
+                                            <p class="text-2xl fw-bold mb-0" >35</p>
+                                        </div>
+                                        <div class="text-primary bg-blue p-2 rounded-3 h-fit-content">
+                                            <i class="bi bi-pie-chart fs-5"></i>
                                         </div>
                                     </div>
-                                    <span class="text-gray text-xs">
-                                        Хороший контроль глюкозы
-                                    </span>
-                                </div>
-                                <div class="bg-yellow rounded-4 p-3 card-progress mb-3">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <p class="text-md fw-semibold mb-0">Ретинопатия</p>
-                                        <span class="text-sm text-warning fw-semibold" data-percent="30">30%</span>
-                                    </div>
-                                    <div class="progress-line my-2">
-                                        <div class="progress-line-inside">
-                                        </div>
-                                    </div>
-                                    <span class="text-gray text-xs">
-                                        Рекомендован осмотр окулиста
-                                    </span>
-                                </div>
-                                <div class="rounded-4 p-3 bg-corp-light text-dark-blue">
-                                    <h6 class="text-md fw-semibold"><i class="bi bi-robot me-2 fs-5"></i>AI Рекомендации:</h6>
-                                    <ul class="text-sm list-unstyled fw-light ps-0 mb-0">
-                                        <li>• Увеличьте физическую активность на 20 мин/день</li>
-                                        <li>• Контролируйте углеводы в вечернее время</li>
-                                        <li>• Запланируйте визит к офтальмологу</li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4">
-                            <div class="w-100 bg-white border rounded-4 p-3 mb-3 text-smoke">
-                                <h6 class="text-md fw-semibold text-dark-custom"><i class="bi bi-exclamation-triangle me-2 text-warning"></i>Важно знать</h6>
-                                <p class="mb-0 text-sm">AI-прогноз основан на ваших данных и не заменяет консультацию врача. При высоких рисках обратитесь к специалисту.</p>
+                    </div>
+                    <!-- DailyGlucoseChart -->
+                    <div id="DailyGlucoseChart">
+                        <div class="mt-4 bg-white mb-3 rounded-4 p-3 card-hover">
+                            <div class="d-flex mb-4 align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-3">
+                                    <button class="text-sm fw-semibold hovered-btn"><span class="text-dark-custom"><i class="fa-solid fa-chevron-left"></i></span></button>
+                                    <h3 class="text-lg fw-semibold mb-0">Воскресенье, 21 мая</h3>
+                                    <button class="text-sm fw-semibold hovered-btn"><span class="text-dark-custom opacity-50"><i class="fa-solid fa-chevron-right"></i></span></button>
+                                </div>
+                                <p class="mb-0 text-gray fw-light text-sm">Средний уровень: <span class="fw-semibold text-smoke">6.6 ммоль/л</span> </p>
                             </div>
-                            <div class="w-100 bg-white border rounded-4 p-3 text-smoke">
-                                <h6 class="text-md fw-semibold text-dark-custom">Как улучшить прогноз?</h6>
-                                <ul class="mb-0 text-sm list-unstyled fw-light">
-                                    <li>• Регулярно измеряйте глюкозу</li>
-                                    <li>• Ведите дневник питания</li>
-                                    <li>• Соблюдайте режим инсулина</li>
-                                    <li>• Увеличьте физическую активность</li>
-                                </ul>
+                            <div class="px-2">
+                                <div id="glucoseChart"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- DailyMeasurements -->
+                    <div id="DailyGlucoseChart">
+                        <div class="w-100 bg-white rounded-4 mt-4 card-hover p-4">
+                            <h5 class="fw-semibold text-lg mb-4">Измерения за день</h5>
+                            <div class="card-hover-bg rounded-4 mb-2 p-3 d-flex justify-content-between">
+                                <div class="d-flex align-items-center gap-3">
+                                    <span class="p-2 bg-green text-green fw-semibold rounded-5">6.1</span>
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <p class="text-sm mb-1 fw-semibold">09:00</p>
+                                        <span class="text-green text-xs fw-light">В норме</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="text-sm fw-semibold hovered-link"><span class="text-dark-custom">Подробнее</span></a>
+                            </div>
+                            <div class="card-hover-bg rounded-4 mb-2 p-3 d-flex justify-content-between">
+                                <div class="d-flex align-items-center gap-3">
+                                    <span class="p-2 bg-red text-danger fw-semibold rounded-5">7.3</span>
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <p class="text-sm mb-1 fw-semibold">13:00</p>
+                                        <span class="text-danger text-xs fw-light">Выше нормы</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="text-sm fw-semibold hovered-link"><span class="text-dark-custom">Подробнее</span></a>
+                            </div>
+                            <div class="card-hover-bg rounded-4 mb-2 p-3 d-flex justify-content-between">
+                                <div class="d-flex align-items-center gap-3">
+                                    <span class="p-2 bg-green text-green fw-semibold rounded-5">6.3</span>
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <p class="text-sm mb-1 fw-semibold">15:00</p>
+                                        <span class="text-green text-xs fw-light">В норме</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="text-sm fw-semibold hovered-link"><span class="text-dark-custom">Подробнее</span></a>
+                            </div>
+                            <div class="card-hover-bg rounded-4 mb-2 p-3 d-flex justify-content-between">
+                                <div class="d-flex align-items-center gap-3">
+                                    <span class="p-2 bg-green text-green fw-semibold rounded-5">5.5</span>
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <p class="text-sm mb-1 fw-semibold">19:00</p>
+                                        <span class="text-green text-xs fw-light">В норме</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="text-sm fw-semibold hovered-link"><span class="text-dark-custom">Подробнее</span></a>
+                            </div>
+                            <div class="card-hover-bg rounded-4 mb-2 p-3 d-flex justify-content-between">
+                                <div class="d-flex align-items-center gap-3">
+                                    <span class="p-2 bg-green text-green fw-semibold rounded-5">6.1</span>
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <p class="text-sm mb-1 fw-semibold">20:00</p>
+                                        <span class="text-green text-xs fw-light">В норме</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="text-sm fw-semibold hovered-link"><span class="text-dark-custom">Подробнее</span></a>
                             </div>
                         </div>
                     </div>

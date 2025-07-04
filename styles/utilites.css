@@ -31,6 +31,9 @@
 .bg-yellow{
     background: var(--color-yellow);
 }
+.bg-red{
+    background: rgb(254, 226, 226);
+}
 .bg-smoke{
     background: rgb(148, 163, 184);
 }
