@@ -40,6 +40,9 @@
 .bg-main{
     background: var(--main-bg);
 }
+.bg-milk{
+    background: var(--color-milk);
+}
 .h-100vh{
     height: 100vh;
 }
@@ -51,4 +54,18 @@
 }
 .border-dashed {
     border: 1px dashed rgba(223, 229, 240, 1); 
+}
+.btn-long{
+    padding: 10px 70px;
+}
+.underlined-corp{
+    border-bottom: 2px solid #88BAFB;
+}
+.h-sm-100vh{
+    height: 100%;
+}
+@media(max-width: 990px){
+    .h-sm-100vh{
+        height: 100vh;
+    }
 }
