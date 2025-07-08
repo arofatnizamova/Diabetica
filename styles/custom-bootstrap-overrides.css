@@ -34,18 +34,13 @@
     color: var(--color-gray);
     font-size: 0.8rem;
 }
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: var(--color-dark-blue);
-    background-color: var(--color-blue);
-    font-size: .875rem;
-    font-weight: 600;
-    border-radius: 0.75rem;
-}
-.nav-link:focus, .nav-link:hover {
-    color: var(--color-gray);
-    font-weight: 600;
-    background-color: rgb(71, 85, 105);
-    border-radius: 0.75rem;
+
+.nav-pills .nav-link{
+    border-radius: 10px;
+    width: 158px;
+    padding: 10px 0;
+    color: var(--color-dirt);
+    background-color: #D6D8DA;
 }
 .autarization .form-control {
     padding: 15px;
@@ -61,12 +56,23 @@
 .autarization .border-rounded-bottom {
     border-radius: 0 0 10px 10px;
 }
-.autarization .form-check-input {
+.form-check-input {
     width: 1.6em;
     height: 1.3em;
 }
-.autarization .form-check-input[type=checkbox] {
+.form-check-input[type=checkbox] {
     border-radius: .6em;
+}
+.registration .form-control{
+    border: 1px solid #BFBFBF;
+    border-radius: 0;
+    padding: 18px;
+    font-size: 1rem;
+}
+.registration .form-control::placeholder{
+    font-weight: 300;
+    font-size: 1rem;
+    color: var(--color-dirt);
 }
 .form-check-input:focus {
     border-color: #BFBFBF;
@@ -79,6 +85,19 @@
 .form-check-input:checked {
     background-color: white;
     border-color: #BFBFBF;
+}
+.registration .form-select{
+    border: 1px solid #BFBFBF;
+    border-radius: 0;
+    padding: 20px;
+    font-size: 1rem;
+    color: #5E5C5C;
+    font-weight: 300;
+}
+
+.registration .form-select:has(option:checked:not([value=""])) {
+    color: #5E5C5C;
+    font-weight: 300;
 }
 @media (min-width: 1400px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {

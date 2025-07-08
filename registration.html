@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetica</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" media="all">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <section class="">
+        <div class="row gx-0">
+            <div class="col-lg-6">
+                <img src="images/autarization and registration/2.png" alt="" class="d-lg-block d-none w-100 h-100vh img-fluid object-fit-cover">
+            </div>
+            <div class="col-lg-6">
+                <div class="w-100 h-100 py-lg-0 py-5 mt-lg-0 mt-lg-5 d-flex flex-column align-items-center justify-content-center position-relative">
+                    <div class="position-absolute top-0 end-0 d-flex align-items-center justify-content-end gap-3 pt-4 pe-4 w-100">
+                        <a href="#" class="d-flex align-items-center gap-2">
+                            <img src="icons/ru.svg" alt="" class="flag-icon">
+                            <span class="fw-light">Ру</span>
+                        </a>
+                        <a href="#" class="d-flex align-items-center gap-2">
+                            <img src="icons/uz.svg" alt="" class="flag-icon">
+                            <span class="fw-light">Uz</span>
+                        </a>
+                        <a href="#" class="d-flex align-items-center gap-2">
+                            <img src="icons/gb.svg" alt="" class="flag-icon">
+                            <span class="fw-light">En</span>
+                        </a>
+                    </div>
+                    <h1 class="mb-5 mt-lg-0 mt-5">Регистрация</h1>
+                    <ul class="nav nav-pills mb-3 gap-lg-4 gap-2" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Я пациент</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Я врач</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content w-100 mt-lg-5 mt-4" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                            <div class="row gx-0 justify-content-center">
+                                <div class="col-xxl-8 col-11">
+                                    <div class="w-100">
+                                        <form action="" class="registration">
+                                            <div class="row gx-sm-2 gx-0 gy-3">
+                                                <div class="col-sm-6">
+                                                    <input name="user_name" type="text" class="form-control" required placeholder="Ф.И.О">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <input name="user_phone" type="tel" class="form-control" placeholder="Номер телефона ">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <input name="user_email" type="email" class="form-control" required placeholder="E-mail ">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <input name="user_birthDate" id="birthdate" type="text" class="form-control" placeholder="Дата рождения">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <input name="user_weight" type="number" min="0" class="form-control" required placeholder="Ваш вес">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <select class="form-select text-sm" name="diabetes_type" required>
+                                                        <option value="" disabled selected hidden>Тип диабета</option>
+                                                        <option value="type1">Тип 1</option>
+                                                        <option value="type2">Тип 2</option>
+                                                        <option value="gestational">Гестационный</option>
+                                                        <option value="other">Другой</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="d-flex py-4 text-lg align-items-md-center justify-content-between flex-md-row flex-column">
+                                                        <p class="fw-light mb-md-0 mb-3">Цель</p>
+                                                        <div class="gap-md-5 gap-2 d-flex flex-sm-row flex-column">
+                                                            <label class="d-flex align-items-center gap-2">
+                                                                <input type="checkbox" class="form-check-input mt-0" name="goal[]" value="sugar">
+                                                                <span class="fw-light">Снижение сахара</span> 
+                                                            </label>
+                                                            <label class="d-flex align-items-center gap-2">
+                                                                <input type="checkbox" class="form-check-input mt-0" name="goal[]" value="weight">
+                                                                <span class="fw-light">Контроль веса</span>   
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <select class="form-select text-sm" name="diagnosis_year" required>
+                                                        <option value="" disabled selected hidden>Год постановки диагноза</option>
+                                                        <option value="2000">2000</option>
+                                                        <option value="2002">2002</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <select class="form-select text-sm" name="current_treatment" required>
+                                                        <option value="" disabled selected hidden>Текущее лечение </option>
+                                                        <option value="type1">Тип 1</option>
+                                                        <option value="type2">Тип 2</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <select class="form-select text-sm" name="sugar_measurements" required>
+                                                        <option value="" disabled selected hidden>Частота измерений сахара</option>
+                                                        <option value="type1">Тип 1</option>
+                                                        <option value="type2">Тип 2</option>
+                                                        <option value="gestational">Гестационный</option>
+                                                        <option value="other">Другой</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <select class="form-select text-sm" name="control_device" required>
+                                                        <option value="" disabled selected hidden>Устройство контроля</option>
+                                                        <option value="type1">Тип 1</option>
+                                                        <option value="type2">Тип 2</option>
+                                                        <option value="gestational">Гестационный</option>
+                                                        <option value="other">Другой</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn btn-primary mt-4 mx-auto d-block btn-long">Продолжить</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                            <div class="row gx-0 justify-content-center">
+                                <div class="col-xxl-8 col-11">
+                                    <div class="w-100">
+                                        <form action="" class="registration">
+                                            <div class="row justify-content-center gx-sm-2 gx-0 gy-3">
+                                                <div class="col-sm-6">
+                                                    <input name="doctor_name" type="text" class="form-control" required placeholder="Ф.И.О">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <input name="doctor_phone" type="tel" class="form-control" placeholder="Номер телефона ">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <input name="doctor_email" type="email" class="form-control" required placeholder="E-mail ">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <input name="doctor_birthDate" id="birthdate" type="text" class="form-control" placeholder="Дата рождения">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <select class="form-select text-sm" name="specialization" required>
+                                                        <option value="" disabled selected hidden>Специальность</option>
+                                                        <option value="2000">2000</option>
+                                                        <option value="2002">2002</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <select class="form-select text-sm" name="doctors_category" required>
+                                                        <option value="" disabled selected hidden>Категория врача </option>
+                                                        <option value="type1">Тип 1</option>
+                                                        <option value="type2">Тип 2</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <select class="form-select text-sm" name="position" required>
+                                                        <option value="" disabled selected hidden>Должность </option>
+                                                        <option value="type1">Тип 1</option>
+                                                        <option value="type2">Тип 2</option>
+                                                        <option value="gestational">Гестационный</option>
+                                                        <option value="other">Другой</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <select class="form-select text-sm" name="work_experience" required>
+                                                        <option value="" disabled selected hidden>Опыт работы </option>
+                                                        <option value="type1">Тип 1</option>
+                                                        <option value="type2">Тип 2</option>
+                                                        <option value="gestational">Гестационный</option>
+                                                        <option value="other">Другой</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <input name="licence" type="text"  class="form-control" required placeholder="Лицензия">
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary mt-4 mx-auto d-block btn-long">Продолжить</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script type="module" src="scripts/main.js"></script>
+</body>
+</html>
