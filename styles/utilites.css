@@ -16,6 +16,9 @@
 .text-smoke{
     color: var(--color-text);
 }
+.text-dirt{
+    color: var(--color-dirt);
+}
 .bg-corp{
     background: var(--color-corp);
 }
