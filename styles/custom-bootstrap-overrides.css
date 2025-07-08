@@ -35,7 +35,24 @@
     font-size: 0.8rem;
 }
 
-.nav-pills .nav-link{
+.custom-beauty.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: var(--color-dark-blue);
+    background-color: var(--color-blue);
+    font-size: .875rem;
+    font-weight: 600;
+    border-radius: 0.75rem;
+}
+.custom-beauty .nav-link:focus, .nav-link:hover {
+    color: var(--color-gray);
+    background-color: rgb(241, 245, 249);
+    border-radius: 0.75rem;
+}
+.registration-tab.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: var(--bs-nav-pills-link-active-color);
+    background-color: var(--bs-nav-pills-link-active-bg);
+    border-radius: 10px;
+}
+.registration-tab.nav-pills .nav-link{
     border-radius: 10px;
     width: 158px;
     padding: 10px 0;
