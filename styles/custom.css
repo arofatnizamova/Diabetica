@@ -124,7 +124,7 @@ a{
 .card-hover-bg{
   transition: all 0.3s ease;
   background: transparent;
-  border: 1px solid rgb(241, 245, 249);
+  border: 2px solid rgb(241, 245, 249);
 }
 .card-hover-bg:hover{
   background: var(--main-bg);
