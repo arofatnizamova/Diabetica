@@ -3,5 +3,7 @@ export function updateProgressLines() {
     const percent = $(this).find('[data-percent]').data('percent');
     $(this).find('.progress-line-inside').css('width', percent + '%');
   });
+  console.log('working');
+  
 
 }

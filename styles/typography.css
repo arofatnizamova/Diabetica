@@ -56,4 +56,10 @@
     .text-lg.fs-smaller{
         font-size: 0.8rem;
     }
+    .text-sm.fs-extra-smaller{
+        font-size: 0.7rem;
+    }
+    .text-md.fs-smaler{
+        font-size: 0.85rem;
+    }
 }

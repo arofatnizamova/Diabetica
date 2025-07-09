@@ -57,7 +57,7 @@ export function renderGlucoseChart(containerId, labels, seriesData) {
     },
     responsive: [
       {
-        breakpoint: 990,
+        breakpoint: 1440,
         options: {
           legend: {
             position: 'bottom',

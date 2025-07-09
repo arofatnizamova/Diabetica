@@ -188,3 +188,8 @@ a{
       padding-top: 80px;
     }
 }
+@media(max-width: 576px){
+  .border-bottom-sm{
+    border-bottom: 1px solid #dee2e6;
+  }
+}
