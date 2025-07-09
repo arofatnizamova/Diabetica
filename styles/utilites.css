@@ -73,8 +73,17 @@
 .h-sm-100vh{
     height: 100%;
 }
+.w-fit-content{
+    width: fit-content;
+}
+.w-lg-fit-content{
+    width: fit-content;
+}
 @media(max-width: 990px){
     .h-sm-100vh{
         height: 100vh;
+    }
+    .w-lg-fit-content{
+        width: 100%;
     }
 }

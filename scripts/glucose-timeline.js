@@ -60,7 +60,7 @@ export function renderGlucoseChart(containerId, labels, seriesData) {
         breakpoint: 990,
         options: {
           legend: {
-            position: 'top',
+            position: 'bottom',
             horizontalAlign: 'center'
           },
         }
@@ -68,7 +68,7 @@ export function renderGlucoseChart(containerId, labels, seriesData) {
       breakpoint: 576,
       options: {
         legend: {
-          position: 'top',
+          position: 'bottom',
           horizontalAlign: 'center'
         },
         chart: { height: 180 },

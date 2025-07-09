@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
@@ -124,159 +125,296 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center gap-3">
-                            <div class="">
-                                <button class="btn d-flex align-items-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                                    <i class="bi bi-person-circle me-2 opacity-75"></i> <span class="fw-medium text-sm">Войти</span>
+                        <div class="d-flex align-items-center gap-4">
+                            <div class="dropdown">
+                                <button class="bg-transparent p-0 border-0 dropdown-toggle position-relative notifications" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-bell"></i>
+                                    <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                                        <span class="visually-hidden">New alerts</span>
+                                    </span>
                                 </button>
-                                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                                    <div class="offcanvas-header pb-0">
-                                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
-                                            <i class="fa-solid fa-xmark"></i>
-                                        </button>
-                                    </div>
-                                    <div class="offcanvas-body pt-0 px-4 text-sm">
-                                        <h5 class="text-lg fw-semibold">Вход в систему</h5>
-                                        <p class="opacity-75">Выберите тип учетной записи и введите данные для входа</p>
-                                        <form>
-                                            <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label fw-semibold">Тип пользователя</label>
-                                                <select class="form-select text-sm" aria-label="Default select example">
-                                                    <option selected>Пациент</option>
-                                                    <option value="1">Врач</option>
-                                                    <option value="2">Родственик пациента</option>
-                                                    <option value="3">Исследователь</option>
-                                                </select>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label fw-semibold">E-mail</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="example@email.ru" aria-describedby="emailHelp">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputPassword1" class="form-label fw-semibold">Пароль</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword1">
-                                            </div>
-                                            <button type="submit" class="btn btn-primary text-sm w-100">Войти</button>
-                                        </form>
-                                        <p class="opacity-75 mt-3 text-center">Нет аккаунта? <a href="#" class="text-corp">Зарегестрироваться</a></p>
-                                    </div>
-                                </div>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
                             </div>
-                            <button type="button" class="bg-transparent border-0 position-relative">
-                                <i class="bi bi-bell"></i>
-                                <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                            <div class="position-relative">
+                                <img src="icons/avatar.png" alt="">
+                                <span class="position-absolute dot-status-position p-1 bg-online border border-dark rounded-circle">
                                     <span class="visually-hidden">New alerts</span>
                                 </span>
-                            </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </header>
             <div class="content pb-5">
                 <div class="container">
-                    <!-- DashboardHeader -->
-                    <div id="DashboardHeader">
-                        <div class="row gy-4">
-                            <div class="col-lg-5">
-                                <div class="w-100">
-                                    <h2 class="text-2xl fw-bold mb-0">
-                                        Дневник питания
-                                    </h2>
-                                    <p class="text-gray fw-light">Записывайте и анализируйте свой рацион</p>
+                    <div class="row gy-xl-0 gy-4">
+                        <div class="col-xl-5">
+                            <!-- info -->
+                             <div class="w-100 mb-4 bg-white rounded-4 mt-lg-0 card-hover p-4">
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <div class="w-100 h-100 d-flex flex-column justify-content-between py-3">
+                                            <h2>Дневник питания</h2>
+                                            <p class="text-lg lh-sm mb-0">Записывайте и анализируйте свой рацион</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="w-100 h-100 d-flex align-items-center justify-content-center">
+                                            <img src="images/men.png" alt="" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                            <!-- input -->
+                             <div class="w-100 mb-4 bg-white rounded-4 mt-lg-0 card-hover p-4">
+                                <form action="">
+                                    <div class="row gy-3">
+                                        <div class="col-xxl-8">
+                                            <p class="mb-3 text-lg fw-medium">Зафиксировать прием пищи</p>
+                                            <input type="text" placeholder="120 г" class="form-control input-data-custom">
+                                        </div>
+                                        <div class="col-xxl-4">
+                                            <div class="dropdown text-sm mb-3">
+                                                <button class="bg-transparent p-0 border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Указать вручную
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">Выбрать из базы</a></li>
+                                                    <li><a class="dropdown-item" href="#">Выбрать из фото</a></li>
+                                                    <li><a class="dropdown-item" href="#">С камеры</a></li>
+                                                </ul>
+                                            </div>
+                                            <button class="btn btn-primary w-100">Сохранить</button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                             </div>
+                             <div class="w-100 mb-4 bg-white rounded-4 mt-lg-0 card-hover p-4">
+                                <form action="">
+                                    <p class="mb-3 text-lg fw-medium">Зафиксировать прием пищи</p>
+                                    <div class="row gy-3">
+                                        <div class="col-xxl-8">
+                                            <p class="text-gray fs-sm">Выберите блюдо</p>
+                                            <input type="text" placeholder="Салат из капусты (120 г)" class="form-control input-data-custom">
+                                        </div>
+                                        <div class="col-xxl-4">
+                                            <div class="dropdown text-sm mb-3">
+                                                <button class="bg-transparent p-0 border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                     Выбрать из базы
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">Выбрать из базы</a></li>
+                                                    <li><a class="dropdown-item" href="#">Выбрать из фото</a></li>
+                                                    <li><a class="dropdown-item" href="#">С камеры</a></li>
+                                                </ul>
+                                            </div>
+                                            <button class="btn btn-primary w-100">Сохранить</button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                             </div>
+                             <div class="w-100 mb-4 bg-white rounded-4 mt-lg-0 card-hover p-4">
+                                <form action="">
+                                    <p class="mb-3 text-lg fw-medium">Зафиксировать прием пищи</p>
+                                    <div class="row gy-3">
+                                        <div class="col-xxl-8">
+                                            <p class="text-gray fs-sm">Выберите из фото</p>
+                                            <input type="text" placeholder="MyFood.png" class="form-control input-data-custom">
+                                            <button class="btn btn-primary w-fit-content mt-3 d-lg-block d-none">Сохранить</button>
+                                        </div>
+                                        <div class="col-xxl-4">
+                                            <div class="dropdown text-sm mb-3">
+                                                <button class="bg-transparent p-0 border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                     Выберите фото
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">Выбрать из базы</a></li>
+                                                    <li><a class="dropdown-item" href="#">Выбрать из фото</a></li>
+                                                    <li><a class="dropdown-item" href="#">С камеры</a></li>
+                                                </ul>
+                                            </div>
+                                            <button class="btn btn-white border-dashed w-100">Сканировать</button>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary w-lg-fit-content mt-3 d-lg-none d-block">Сохранить</button>
+                                </form>
+                             </div>
+                             <div class="w-100 mb-4 bg-white rounded-4 mt-lg-0 card-hover p-4">
+                                <form action="">
+                                    <p class="mb-3 text-lg fw-medium">Зафиксировать прием пищи</p>
+                                    <div class="row gy-3">
+                                        <div class="col-xxl-8">
+                                            <p class="text-gray fs-sm">Количество углеводов</p>
+                                            <input type="text" placeholder="На фото: 11 гр углеводов" class="form-control input-data-custom">
+                                            <button class="btn btn-primary w-fit-content mt-3 d-lg-block d-none">Сохранить</button>
+                                        </div>
+                                        <div class="col-xxl-4">
+                                            <div class="dropdown text-sm mb-3">
+                                                <button class="bg-transparent p-0 border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    С камеры
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">Выбрать из базы</a></li>
+                                                    <li><a class="dropdown-item" href="#">Выбрать из фото</a></li>
+                                                    <li><a class="dropdown-item" href="#">С камеры</a></li>
+                                                </ul>
+                                            </div>
+                                            <button class="btn btn-white border-dashed w-100">Открыть камеру</button>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary w-lg-fit-content mt-3 d-lg-none d-block">Сохранить</button>
+                                </form>
+                             </div>
+                            <!-- DailyFoodMeasurements -->
+                            <div id="DailyFoodMeasurements">
+                                <div class="w-100 bg-white rounded-4 mt-4 card-hover p-4">
+                                    <div class="d-flex align-items-center justify-content-between flex-wrap mb-4">
+                                        <p class="text-2xl fw-semibold mb-0">История приемов пищи</p>
+                                        <div class="d-flex align-items-center gap-3">
+                                            <p class="mb-0">Дата:</p>
+                                            <div class="calendar-wrapper">
+                                                <input type="text" id="flatpickrInput" class="hidden-input">
+                                                
+                                                <button type="button" id="calendarButton" class="bg-transparent border-0 p-0">
+                                                    <span>Сегодня</span>
+                                                    <i class="bi bi-calendar-event text-gray px-2 py-1 bg-blue rounded-5"></i>
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <ul class="nav custom-beauty nav-pills mb-3" id="pills-tab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Завтрак</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Обед</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Ужин</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false">Перекус</button>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content" id="pills-tabContent">
+                                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                                            <div class="card-hover-bg rounded-4 mb-2 p-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex align-items-center gap-4">
+                                                    <img src="images/food/1.png" alt="" class="food-img img-fluid object-fit-cover">
+                                                    <div class="d-flex flex-column justify-content-center">
+                                                        <p class="text-lg fw-medium mb-0 lh-sm">Тостер с авокадо</p>
+                                                        <span class="text-sm text-gray">Углеводы : <span>42</span>г</span>
+                                                    </div>
+                                                </div>
+                                                <p class="fw-medium text-gray">08:00</p>
+                                            </div>
+                                            <div class="card-hover-bg rounded-4 mb-2 p-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex align-items-center gap-4">
+                                                    <img src="images/food/2.png" alt="" class="food-img img-fluid object-fit-cover">
+                                                    <div class="d-flex flex-column justify-content-center">
+                                                        <p class="text-lg fw-medium mb-0 lh-sm">Овсянка с ягодами</p>
+                                                        <span class="text-sm text-gray">Углеводы : <span>42</span>г</span>
+                                                    </div>
+                                                </div>
+                                                <p class="fw-medium text-gray">08:00</p>
+                                            </div>
+                                            <div class="card-hover-bg rounded-4 mb-2 p-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex align-items-center gap-4">
+                                                    <img src="images/food/3.png" alt="" class="food-img img-fluid object-fit-cover">
+                                                    <div class="d-flex flex-column justify-content-center">
+                                                        <p class="text-lg fw-medium mb-0 lh-sm">Яичница</p>
+                                                        <span class="text-sm text-gray">Углеводы : <span>42</span>г</span>
+                                                    </div>
+                                                </div>
+                                                <p class="fw-medium text-gray">08:00</p>
+                                            </div>
+                                            <button class="btn btn-primary text-sm w-100" type="button">
+                                                <i class="fa-solid fa-plus me-2"></i>
+                                                <span class="fw-medium">Добавить блюдо</span>
+                                            </button>
+                                        </div>
+                                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">...</div>
+                                        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">...</div>
+                                        <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">...</div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-lg-7">
-                                <div class="w-100 d-flex flex-wrap justify-content-xl-end gap-3 align-items-center">
-                                    <button class="btn btn-white text-sm" type="button">
-                                        <i class="bi bi-calendar-event me-1"></i>
-                                        <span class="fw-semibold">История</span>
-                                    </button>
-                                    <button class="btn btn-white text-sm" type="button">
-                                        <i class="bi bi-camera me-1"></i>
-                                        <span class="fw-semibold">Фото еды</span>
-                                    </button>
-                                    <button class="btn btn-primary text-sm" type="button">
-                                        <i class="fa-solid fa-plus me-1"></i>
-                                        <span>Добавить блюдо</span>
-                                    </button>
-                                </div>
-                            </div>
+
                         </div>
-                    </div>
-                    <!-- MetricsCards -->
-                    <div id="MetricsCards">
-                        <div class="pt-3">
-                            <div class="row gx-sm-3 gx-0 gy-3">
-                                <div class="col-xl-3 col-sm-6">
-                                    <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover text-sm d-flex justify-content-between">
-                                        <div>
-                                            <p class="opacity-75 fw-semibold mb-1">Всего углеводов</p>
-                                            <p class="text-2xl fw-bold mb-0">186 г</p>
+                        <div class="col-xl-7">
+                            <!-- MetricsCards -->
+                            <div id="MetricsCards">
+                                <div class="">
+                                    <div class="row gx-sm-3 gx-0 gy-3">
+                                        <div class="col-sm-6">
+                                            <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover text-sm d-flex justify-content-between">
+                                                <div>
+                                                    <p class="opacity-75 fw-semibold mb-1">Всего углеводов </p>
+                                                    <p class="text-2xl fw-bold mb-0">186 г</p>
+                                                </div>
+                                                <div class="text-primary bg-blue p-2 rounded-3 h-fit-content">
+                                                    <i class="fa-solid fa-apple-whole fs-5"></i>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="text-primary bg-blue p-2 rounded-3 h-fit-content">
-                                            <i class="fa-solid fa-apple-whole fs-5"></i>
+                                        <div class="col-sm-6">
+                                            <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover text-sm d-flex justify-content-between">
+                                                <div>
+                                                    <p class="opacity-75 fw-semibold mb-1">Белки</p>
+                                                    <p class="text-2xl fw-bold mb-0" >95 г</p>
+                                                </div>
+                                                <div class="text-success bg-green p-2 rounded-3 h-fit-content">
+                                                    <i class="fa-solid fa-apple-whole fs-5"></i>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-sm-6">
-                                    <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover text-sm d-flex justify-content-between">
-                                        <div>
-                                            <p class="opacity-75 fw-semibold mb-1">Калории</p>
-                                            <p class="text-2xl fw-bold mb-0" >1850 ккал</p>
+                                        <div class="col-sm-6">
+                                            <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover text-sm d-flex justify-content-between">
+                                                <div>
+                                                    <p class="opacity-75 fw-semibold mb-1">Калории</p>
+                                                    <p class="text-2xl fw-bold mb-0" >1850 ккал</p>
+                                                </div>
+                                                <div class="text-warning bg-yellow p-2 rounded-3 h-fit-content">
+                                                    <i class="fa-solid fa-apple-whole fs-5"></i>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="text-success bg-green p-2 rounded-3 h-fit-content">
-                                            <i class="fa-solid fa-apple-whole fs-5"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-sm-6">
-                                    <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover text-sm d-flex justify-content-between">
-                                        <div>
-                                            <p class="opacity-75 fw-semibold mb-1">Белки</p>
-                                            <p class="text-2xl fw-bold mb-0" >95 г</p>
-                                        </div>
-                                        <div class="text-warning bg-yellow p-2 rounded-3 h-fit-content">
-                                            <i class="fa-solid fa-apple-whole fs-5"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-sm-6">
-                                    <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover text-sm d-flex justify-content-between">
-                                        <div>
-                                            <p class="opacity-75 fw-semibold mb-1">Жиры</p>
-                                            <p class="text-2xl fw-bold mb-0" >68 г</p>
-                                        </div>
-                                        <div class="text-primary bg-blue p-2 rounded-3 h-fit-content">
-                                            <i class="fa-solid fa-apple-whole fs-5"></i>
+                                        <div class="col-sm-6">
+                                            <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover text-sm d-flex justify-content-between">
+                                                <div>
+                                                    <p class="opacity-75 fw-semibold mb-1">Жиры</p>
+                                                    <p class="text-2xl fw-bold mb-0" >68 г</p>
+                                                </div>
+                                                <div class="text-primary bg-blue p-2 rounded-3 h-fit-content">
+                                                    <i class="fa-solid fa-apple-whole fs-5"></i>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    
-                    <!-- DailyFoodMeasurements -->
-                    <div id="DailyFoodMeasurements">
-                        <div class="w-100 bg-white rounded-4 mt-4 card-hover p-4">
-                            <ul class="nav custom-beauty nav-pills mb-3" id="pills-tab" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Завтрак</button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Обед</button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Ужин</button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false">Перекус</button>
-                                </li>
-                            </ul>
-                            <div class="tab-content" id="pills-tabContent">
-                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">...</div>
-                                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">...</div>
-                                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">...</div>
-                                <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">...</div>
+                            <!-- DailyGlucoseChart -->
+                            <div id="DailyGlucoseChart">
+                                <div class="mt-4 bg-white mb-3 rounded-4 p-3 card-hover">
+                                    <div class="d-flex mb-4 align-items-center justify-content-between flex-wrap">
+                                        <p class="mb-0 text-dark-custom fw-bold text-2xl">График активности </p>
+                                        <div class="d-flex align-items-center gap-3">
+                                            <button class="text-sm fw-semibold hovered-btn"><span class="text-dark-custom"><i class="fa-solid fa-chevron-left"></i></span></button>
+                                            <h3 class="text-lg fw-semibold mb-0">Июнь 2025</h3>
+                                            <button class="text-sm fw-semibold hovered-btn"><span class="text-dark-custom opacity-50"><i class="fa-solid fa-chevron-right"></i></span></button>
+                                        </div>
+                                    </div>
+                                    <div class="px-2">
+                                        <div id="glucoseChart"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -284,11 +422,13 @@
             </div>
         </div>
     </div>
-    
+
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script type="module" src="scripts/main.js"></script>
 </body>
 </html>

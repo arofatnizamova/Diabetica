@@ -155,14 +155,14 @@
                         <div class="col-xl-5">
                             <!-- info -->
                              <div class="w-100 mb-4 bg-white rounded-4 mt-lg-0 card-hover p-4">
-                                <div class="row">
-                                    <div class="col-lg-8">
+                                <div class="row gx-0">
+                                    <div class="col-8">
                                         <div class="w-100 h-100 d-flex flex-column justify-content-between py-3">
-                                            <h2>Мониторинг глюкозы</h2>
-                                            <p class="text-lg lh-sm mb-0">Отслеживайте и анализируйте уровень глюкозы</p>
+                                            <h2 class="fs-smaller">Мониторинг глюкозы</h2>
+                                            <p class="text-lg fs-smaller lh-sm mb-0">Отслеживайте и анализируйте уровень глюкозы</p>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4">
+                                    <div class="col-4">
                                         <div class="w-100 h-100 d-flex align-items-center justify-content-center">
                                             <img src="images/men.png" alt="" class="img-fluid">
                                         </div>
@@ -174,7 +174,7 @@
                                 <form action="">
                                     <div class="row gy-3">
                                         <div class="col-xxl-8">
-                                            <p class="mb-3">Зафиксировать уровень глюкозы</p>
+                                            <p class="mb-3 text-lg fw-medium">Зафиксировать уровень глюкозы</p>
                                             <input type="text" placeholder="3 мм/л" class="form-control input-data-custom">
                                             <p class="mb-0 mt-2 text-sm text-danger-custom">Статус: <span class="status">Гипогликемия</span></p>
                                         </div>
@@ -198,9 +198,20 @@
                             <!-- DailyMeasurements -->
                             <div id="DailyGlucoseChart">
                                 <div class="w-100 bg-white rounded-4 mt-lg-0 card-hover p-4">
-                                    <h5 class="fw-semibold text-2xl mb-4">История измерений</h5>
-                                    <div class="d-flex align-items-center justify-content-end text-sm">
-                                        <p>Дата: <span>Сегодня</span></p>
+                                    <div class="d-flex align-items-center justify-content-between flex-wrap mb-4">
+                                        <p class="text-2xl fw-semibold mb-0">История измерений</p>
+                                        <div class="d-flex align-items-center gap-3">
+                                            <p class="mb-0">Дата:</p>
+                                            <div class="calendar-wrapper">
+                                                <input type="text" id="flatpickrInput" class="hidden-input">
+                                                
+                                                <button type="button" id="calendarButton" class="bg-transparent border-0 p-0">
+                                                    <span>Сегодня</span>
+                                                    <i class="bi bi-calendar-event text-gray px-2 py-1 bg-blue rounded-5"></i>
+                                                </button>
+                                            </div>
+
+                                        </div>
                                     </div>
                                     <div class="card-hover-bg rounded-4 mb-2 p-3 d-flex justify-content-between">
                                         <div class="d-flex align-items-center gap-3">
@@ -255,48 +266,48 @@
                             <!-- MetricsCards -->
                             <div id="MetricsCards">
                                 <div class="">
-                                    <div class="row gx-sm-3 gx-0 gy-3">
-                                        <div class="col-sm-6">
+                                    <div class="row gx-sm-3 gx-2 gy-3">
+                                        <div class="col-6">
                                             <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover text-sm d-flex justify-content-between">
                                                 <div>
-                                                    <p class="opacity-75 fw-semibold mb-1">Средняя за неделю</p>
-                                                    <p class="text-2xl fw-bold mb-0">6 ммоль/л</p>
+                                                    <p class="opacity-75 fw-semibold mb-1 text-md fs-extra-smaller">Средняя за неделю</p>
+                                                    <p class="text-xl fs-extra-smaller fw-bold mb-0">6 ммоль/л</p>
                                                 </div>
-                                                <div class="text-primary bg-blue p-2 rounded-3 h-fit-content">
-                                                    <i class="bi bi-pie-chart fs-5"></i>
+                                                <div class="text-primary bg-blue p-sm-2 p-1 rounded-3 h-fit-content">
+                                                    <i class="fa-solid fa-chart-pie fs-5"></i>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
+                                        <div class="col-6">
                                             <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover text-sm d-flex justify-content-between">
                                                 <div>
-                                                    <p class="opacity-75 fw-semibold mb-1">Минимум за неделю</p>
-                                                    <p class="text-2xl fw-bold mb-0" >5.3 ммоль/л</p>
+                                                    <p class="opacity-75 fw-semibold mb-1 text-md fs-extra-smaller">Минимум за неделю</p>
+                                                    <p class="text-xl fs-extra-smaller fw-bold mb-0" >5.3 ммоль/л</p>
                                                 </div>
-                                                <div class="text-success bg-green p-2 rounded-3 h-fit-content">
-                                                    <i class="bi bi-pie-chart fs-5"></i>
+                                                <div class="text-success bg-green p-sm-2 p-1 rounded-3 h-fit-content">
+                                                    <i class="fa-solid fa-chart-pie fs-5"></i>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
+                                        <div class="col-6">
                                             <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover text-sm d-flex justify-content-between">
                                                 <div>
-                                                    <p class="opacity-75 fw-semibold mb-1">Максимум за неделю</p>
-                                                    <p class="text-2xl fw-bold mb-0" >7.3 ммоль/л</p>
+                                                    <p class="opacity-75 fw-semibold mb-1 text-md fs-extra-smaller">Максимум за неделю</p>
+                                                    <p class="text-xl fs-extra-smaller fw-bold mb-0" >7.3 ммоль/л</p>
                                                 </div>
-                                                <div class="text-warning bg-yellow p-2 rounded-3 h-fit-content">
-                                                    <i class="bi bi-pie-chart fs-5"></i>
+                                                <div class="text-warning bg-yellow p-sm-2 p-1 rounded-3 h-fit-content">
+                                                    <i class="fa-solid fa-chart-pie fs-5"></i>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
+                                        <div class="col-6">
                                             <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover text-sm d-flex justify-content-between">
                                                 <div>
-                                                    <p class="opacity-75 fw-semibold mb-1">Количество измерений</p>
-                                                    <p class="text-2xl fw-bold mb-0" >35</p>
+                                                    <p class="opacity-75 fw-semibold mb-1 text-md fs-extra-smaller">Количество измерений</p>
+                                                    <p class="text-xl fs-extra-smaller fw-bold mb-0" >35</p>
                                                 </div>
-                                                <div class="text-primary bg-blue p-2 rounded-3 h-fit-content">
-                                                    <i class="bi bi-pie-chart fs-5"></i>
+                                                <div class="text-primary bg-blue p-sm-2 p-1 rounded-3 h-fit-content">
+                                                    <i class="fa-solid fa-chart-pie fs-5"></i>
                                                 </div>
                                             </div>
                                         </div>

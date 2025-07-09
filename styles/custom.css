@@ -161,11 +161,27 @@ a{
   border-radius: 15px;
 }
 .input-data-custom.form-control::placeholder{
-  font-size: 1.2rem;
+  font-size: 1rem;
+}
+.food-img{
+  width: 60px;
+}
+.calendar-wrapper {
+    position: relative;
+    display: inline-block;
 }
 
+.hidden-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  right: 0;
+}
 @media(max-width: 990px){
     .header-fluid {
         width: 100%;
+    }
+    .flatpickr-calendar{
+      right: 20px !important;
     }
 }

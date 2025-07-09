@@ -23,3 +23,31 @@
     font-size: 1.5rem;
     line-height: 2rem;
 }
+@media(max-width: 576px){
+    .text-xl.fs-extra-smaller{
+        font-size: 1.25rem;
+    }
+    .text-md.fs-extra-smaller{
+        font-size: 0.75rem;
+    }
+    h2.fs-smaller{
+        font-size: 1.2rem;
+    }
+    .text-lg.fs-smaller{
+        font-size: 0.9rem;
+    }
+}
+@media(max-width: 420px){
+    .text-xl.fs-extra-smaller{
+        font-size: 0.8rem;
+    }
+    .text-md.fs-extra-smaller{
+        font-size: 0.7rem;
+    }
+    h2.fs-smaller{
+        font-size: 1.1rem;
+    }
+    .text-lg.fs-smaller{
+        font-size: 0.8rem;
+    }
+}

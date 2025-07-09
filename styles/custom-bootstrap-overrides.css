@@ -55,6 +55,9 @@
     background-color: rgb(241, 245, 249);
     border-radius: 0.75rem;
 }
+.custom-beauty .nav-link{
+    color: var(--color-gray);
+}
 .registration-tab.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: var(--color-dark-cusrom);
     font-weight: 600;
