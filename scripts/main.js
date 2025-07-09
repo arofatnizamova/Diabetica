@@ -7,9 +7,10 @@ $(document).ready(function () {
     const data = [5.5, 7.4, 6.1, 5.8, 6.4, 8.0];
     renderGlucoseChart('glucoseChart', labels, data);
     updateProgressLines();
-  //   flatpickr("#birthdate", {
-  //   dateFormat: "Y-m-d",
-  //   maxDate: "today",
-  //   locale: "ru"
-  // });
+    flatpickr("#birthdate", {
+    dateFormat: "Y-m-d",
+    maxDate: "today",
+    locale: "ru"
+  });
+  
 });

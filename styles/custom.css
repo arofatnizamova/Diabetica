@@ -148,6 +148,21 @@ a{
 .flag-icon{
   width: 25px;
 }
+.dot-status-position {
+  bottom: -4px;
+  right: 2px;
+  width: 15px;
+  height: 15px;
+}
+.input-data-custom.form-control{
+  border: none;
+  background: #f1f5f9;
+  padding: 14px 23px;
+  border-radius: 15px;
+}
+.input-data-custom.form-control::placeholder{
+  font-size: 1.2rem;
+}
 @media(max-width: 990px){
     .header-fluid {
         width: 100%;

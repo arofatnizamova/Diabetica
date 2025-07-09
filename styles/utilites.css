@@ -19,6 +19,9 @@
 .text-dirt{
     color: var(--color-dirt);
 }
+.text-danger-custom{
+    color: #FF7272;
+}
 .bg-corp{
     background: var(--color-corp);
 }
@@ -45,6 +48,9 @@
 }
 .bg-milk{
     background: var(--color-milk);
+}
+.bg-online{
+    background-color: #47B039;
 }
 .h-100vh{
     height: 100vh;
