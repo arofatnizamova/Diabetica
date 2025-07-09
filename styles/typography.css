@@ -39,6 +39,9 @@
     .text-2xl.fs-extra-smaller{
         font-size: 1.1rem;
     }
+    .text-sm.fs-larger{
+        font-size: 1rem;
+    }
 }
 @media(max-width: 420px){
     .text-xl.fs-extra-smaller{

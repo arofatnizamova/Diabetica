@@ -155,20 +155,71 @@
                         <div class="col-xl-5">
                             <!-- info -->
                              <div class="w-100 mb-4 bg-white rounded-4 mt-lg-0 card-hover p-4">
-                                <div class="row">
-                                    <div class="col-lg-8">
+                                <div class="row gx-0">
+                                    <div class="col-8">
                                         <div class="w-100 h-100 d-flex flex-column justify-content-between py-3">
-                                            <h2>Дневник питания</h2>
-                                            <p class="text-lg lh-sm mb-0">Записывайте и анализируйте свой рацион</p>
+                                            <h2 class="fs-smaller">Дневник питания</h2>
+                                            <p class="text-lg fs-smaller lh-sm mb-0">Записывайте и анализируйте свой рацион</p>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4">
+                                    <div class="col-4">
                                         <div class="w-100 h-100 d-flex align-items-center justify-content-center">
                                             <img src="images/men.png" alt="" class="img-fluid">
                                         </div>
                                     </div>
                                 </div>
                              </div>
+                             <!-- MetricsCards mobile -->
+                            <div id="MetricsCards-desctop">
+                                <div class="d-lg-none d-block mb-4">
+                                    <div class="row gx-sm-3 gx-2 gy-3">
+                                        <div class="col-6">
+                                            <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover">
+                                                <div class="d-flex justify-content-between">
+                                                    <p class="opacity-75 fw-semibold mb-1 text-md fs-extra-smaller">Всего углеводов </p>
+                                                    <div class="text-primary bg-blue p-sm-2 p-1 rounded-3 h-fit-content">
+                                                        <i class="fa-solid fa-apple-whole fs-5"></i>
+                                                    </div>
+                                                </div>
+                                                <p class="text-xl fs-extra-smaller fw-bold mb-0">186 г</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover">
+                                                <div class="d-flex justify-content-between">
+                                                    <p class="opacity-75 fw-semibold mb-1 text-md fs-extra-smaller">Белки</p>
+                                                    <div class="text-success bg-green p-sm-2 p-1 rounded-3 h-fit-content">
+                                                        <i class="fa-solid fa-apple-whole fs-5"></i>
+                                                    </div>
+                                                </div>
+                                                <p class="text-xl fs-extra-smaller fw-bold mb-0" >95 г</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover">
+                                                <div class="d-flex justify-content-between">
+                                                    <p class="opacity-75 fw-semibold mb-1 text-md fs-extra-smaller">Калории</p>
+                                                    <div class="text-warning bg-yellow p-sm-2 p-1 rounded-3 h-fit-content">
+                                                        <i class="fa-solid fa-apple-whole fs-5"></i>
+                                                    </div>
+                                                </div>
+                                                <p class="text-xl fs-extra-smaller fw-bold mb-0" >1850 ккал</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover">
+                                                <div class="d-flex justify-content-between">
+                                                    <p class="opacity-75 fw-semibold mb-1 text-md fs-extra-smaller">Жиры</p>
+                                                    <div class="text-primary bg-blue p-sm-2 p-1 rounded-3 h-fit-content">
+                                                        <i class="fa-solid fa-apple-whole fs-5"></i>
+                                                    </div>
+                                                </div>
+                                                <p class="text-xl fs-extra-smaller fw-bold mb-0" >68 г</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <!-- input -->
                              <div class="w-100 mb-4 bg-white rounded-4 mt-lg-0 card-hover p-4">
                                 <form action="">
@@ -178,7 +229,7 @@
                                             <input type="text" placeholder="120 г" class="form-control input-data-custom">
                                         </div>
                                         <div class="col-xxl-4">
-                                            <div class="dropdown text-sm mb-3">
+                                            <div class="dropdown text-sm fs-larger mb-3">
                                                 <button class="bg-transparent p-0 border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                     Указать вручную
                                                 </button>
@@ -203,7 +254,7 @@
                                             <input type="text" placeholder="Салат из капусты (120 г)" class="form-control input-data-custom">
                                         </div>
                                         <div class="col-xxl-4">
-                                            <div class="dropdown text-sm mb-3">
+                                            <div class="dropdown text-sm fs-larger mb-3">
                                                 <button class="bg-transparent p-0 border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                      Выбрать из базы
                                                 </button>
@@ -229,7 +280,7 @@
                                             <button class="btn btn-primary w-fit-content mt-3 d-lg-block d-none">Сохранить</button>
                                         </div>
                                         <div class="col-xxl-4">
-                                            <div class="dropdown text-sm mb-3">
+                                            <div class="dropdown text-sm fs-larger mb-3">
                                                 <button class="bg-transparent p-0 border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                      Выберите фото
                                                 </button>
@@ -255,7 +306,7 @@
                                             <button class="btn btn-primary w-fit-content mt-3 d-lg-block d-none">Сохранить</button>
                                         </div>
                                         <div class="col-xxl-4">
-                                            <div class="dropdown text-sm mb-3">
+                                            <div class="dropdown text-sm fs-larger mb-3">
                                                 <button class="bg-transparent p-0 border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                     С камеры
                                                 </button>
@@ -274,8 +325,8 @@
                             <!-- DailyFoodMeasurements -->
                             <div id="DailyFoodMeasurements">
                                 <div class="w-100 bg-white rounded-4 mt-4 card-hover p-4">
-                                    <div class="d-flex align-items-center justify-content-between flex-wrap mb-4">
-                                        <p class="text-2xl fw-semibold mb-0">История приемов пищи</p>
+                                    <div class="d-flex align-items-center justify-content-sm-between justify-content-center flex-sm-row flex-column mb-4">
+                                        <p class="text-2xl fs-extra-smaller fw-semibold mb-sm-0 mb-4 fs-larger">История приемов пищи</p>
                                         <div class="d-flex align-items-center gap-3">
                                             <p class="mb-0">Дата:</p>
                                             <div class="calendar-wrapper">
@@ -306,34 +357,34 @@
                                     <div class="tab-content" id="pills-tabContent">
                                         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
                                             <div class="card-hover-bg rounded-4 mb-2 p-3 d-flex justify-content-between align-items-center">
-                                                <div class="d-flex align-items-center gap-4">
+                                                <div class="d-flex align-items-center gap-sm-4 gap-2">
                                                     <img src="images/food/1.png" alt="" class="food-img img-fluid object-fit-cover">
                                                     <div class="d-flex flex-column justify-content-center">
-                                                        <p class="text-lg fw-medium mb-0 lh-sm">Тостер с авокадо</p>
+                                                        <p class="text-lg fs-smaller fw-medium mb-0 lh-sm">Тостер с авокадо</p>
                                                         <span class="text-sm text-gray">Углеводы : <span>42</span>г</span>
                                                     </div>
                                                 </div>
-                                                <p class="fw-medium text-gray">08:00</p>
+                                                <p class="fw-medium text-gray text-sm">08:00</p>
                                             </div>
                                             <div class="card-hover-bg rounded-4 mb-2 p-3 d-flex justify-content-between align-items-center">
-                                                <div class="d-flex align-items-center gap-4">
+                                                <div class="d-flex align-items-center gap-sm-4 gap-2">
                                                     <img src="images/food/2.png" alt="" class="food-img img-fluid object-fit-cover">
                                                     <div class="d-flex flex-column justify-content-center">
-                                                        <p class="text-lg fw-medium mb-0 lh-sm">Овсянка с ягодами</p>
+                                                        <p class="text-lg fs-smaller fw-medium mb-0 lh-sm">Овсянка с ягодами</p>
                                                         <span class="text-sm text-gray">Углеводы : <span>42</span>г</span>
                                                     </div>
                                                 </div>
-                                                <p class="fw-medium text-gray">08:00</p>
+                                                <p class="fw-medium text-gray text-sm">08:00</p>
                                             </div>
                                             <div class="card-hover-bg rounded-4 mb-2 p-3 d-flex justify-content-between align-items-center">
-                                                <div class="d-flex align-items-center gap-4">
+                                                <div class="d-flex align-items-center gap-sm-4 gap-2">
                                                     <img src="images/food/3.png" alt="" class="food-img img-fluid object-fit-cover">
                                                     <div class="d-flex flex-column justify-content-center">
-                                                        <p class="text-lg fw-medium mb-0 lh-sm">Яичница</p>
+                                                        <p class="text-lg fs-smaller fw-medium mb-0 lh-sm">Яичница</p>
                                                         <span class="text-sm text-gray">Углеводы : <span>42</span>г</span>
                                                     </div>
                                                 </div>
-                                                <p class="fw-medium text-gray">08:00</p>
+                                                <p class="fw-medium text-gray text-sm">08:00</p>
                                             </div>
                                             <button class="btn btn-primary text-sm w-100" type="button">
                                                 <i class="fa-solid fa-plus me-2"></i>
@@ -351,7 +402,7 @@
                         <div class="col-xl-7">
                             <!-- MetricsCards -->
                             <div id="MetricsCards">
-                                <div class="">
+                                <div class="d-lg-block d-none">
                                     <div class="row gx-sm-3 gx-0 gy-3">
                                         <div class="col-sm-6">
                                             <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover text-sm d-flex justify-content-between">
@@ -402,10 +453,10 @@
                             </div>
                             <!-- DailyGlucoseChart -->
                             <div id="DailyGlucoseChart">
-                                <div class="mt-4 bg-white mb-3 rounded-4 p-3 card-hover">
-                                    <div class="d-flex mb-4 align-items-center justify-content-between flex-wrap">
+                                <div class="mt-sm-4 mt-2 bg-white mb-sm-3 rounded-4 p-3 card-hover">
+                                    <div class="d-flex mb-4 align-items-center justify-content-sm-between justify-content-center flex-sm-row flex-column">
                                         <p class="mb-0 text-dark-custom fw-bold text-2xl">График активности </p>
-                                        <div class="d-flex align-items-center gap-3">
+                                        <div class="d-flex align-items-center gap-3 mt-sm-0 mt-3">
                                             <button class="text-sm fw-semibold hovered-btn"><span class="text-dark-custom"><i class="fa-solid fa-chevron-left"></i></span></button>
                                             <h3 class="text-lg fw-semibold mb-0">Июнь 2025</h3>
                                             <button class="text-sm fw-semibold hovered-btn"><span class="text-dark-custom opacity-50"><i class="fa-solid fa-chevron-right"></i></span></button>
