@@ -1,16 +1,28 @@
 import { renderGlucoseChart } from './glucose-timeline.js';
-import { initFileUpload } from './upload.js';
 import { updateProgressLines } from './initProgressBars.js';
+import { renderCustomDateInput } from './DataInputCustom.js';
 $(document).ready(function () {
-    initFileUpload();
-    const labels = ['06:00', '09:00', '12:00', '15:00', '18:00', '21:00'];
-    const data = [5.5, 7.4, 6.1, 5.8, 6.4, 8.0];
-    renderGlucoseChart('glucoseChart', labels, data);
-    updateProgressLines();
-    flatpickr("#birthdate", {
-    dateFormat: "Y-m-d",
-    maxDate: "today",
-    locale: "ru"
-  });
-  
+    const labels = Array.from({ length: 30 }, (_, i) => i + 1);
+    const seriesData = [
+      {
+        name: 'Частота измерений',
+        data: [
+          4, 6, 3, 7, 5, 8, 3, 4, 6, 7,
+          5, 4, 3, 6, 8, 5, 7, 6, 4, 3,
+          5, 7, 6, 4, 3, 8, 6, 5, 7, 4
+        ]
+      },
+      {
+        name: 'Средняя глюкоза',
+        data: [
+          4.2, 4.6, 5.0, 5.5, 6.1, 6.3, 6.8, 7.2, 6.9, 6.5,
+          6.1, 5.7, 5.4, 5.1, 5.6, 6.0, 6.5, 6.9, 7.1, 6.7,
+          6.3, 5.9, 5.4, 5.0, 4.8, 4.6, 4.4, 4.2, 4.0, 3.9
+        ]
+      }
+    ];
+
+  renderGlucoseChart('glucoseChart', labels, seriesData);
+  updateProgressLines();
+  renderCustomDateInput('#birthdate');
 });
