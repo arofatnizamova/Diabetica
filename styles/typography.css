@@ -36,13 +36,16 @@
     .text-lg.fs-smaller{
         font-size: 0.9rem;
     }
+    .text-2xl.fs-extra-smaller{
+        font-size: 1.1rem;
+    }
 }
 @media(max-width: 420px){
     .text-xl.fs-extra-smaller{
-        font-size: 0.8rem;
+        font-size: 0.95rem;
     }
     .text-md.fs-extra-smaller{
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
     h2.fs-smaller{
         font-size: 1.1rem;

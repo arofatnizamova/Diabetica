@@ -184,4 +184,7 @@ a{
     .flatpickr-calendar{
       right: 20px !important;
     }
+    .content{
+      padding-top: 80px;
+    }
 }
