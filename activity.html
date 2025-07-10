@@ -70,7 +70,7 @@
                                 <button class="bg-transparent border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
                                     <i class="bi bi-list fs-5 opacity-75"></i>
                                 </button>
-                                    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                                    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling">
                                     <div class="offcanvas-header border-bottom">
                                         <div class="d-flex align-items-center gap-2">
                                             <a href="#" class="py-1 px-2 rounded-3 bg-corp fw-bold text-sm text-white">D</a>
@@ -170,7 +170,7 @@
                                 </div>
                              </div>
                              <!-- MetricsCards mobile -->
-                            <div id="MetricsCards-desctop">
+                            <div id="MetricsCards-mobile">
                                 <div class="d-lg-none d-block mb-4">
                                     <div class="row gx-sm-3 gx-2 gy-3">
                                         <div class="col-6">
@@ -229,31 +229,36 @@
                             </div>
                             <!-- input -->
                              <div class="w-100 mb-4 bg-white rounded-4 mt-lg-0 card-hover p-4">
-                                <form action="">
+                                <form>
                                     <div class="row gy-3">
                                         <div class="col-xxl-8">
                                             <p class="mb-3 text-lg fw-medium">Зафиксировать активность</p>
-                                            <input type="text" placeholder="Время: 20 мин" class="form-control input-data-custom">
+                                            <label for="activity_time" class="visually-hidden">Зафиксировать активность</label>
+                                            <input type="text" id="activity_time" placeholder="Время: 20 мин" class="form-control input-data-custom">
                                         </div>
                                         <div class="col-xxl-4">
                                             <div class="dropdown text-sm mb-3">
-                                                <button class="bg-transparent p-0 border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Тип: Велосипед
-                                                </button>
-                                                <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                                </ul>
+                                                <div class="d-flex align-items-center">
+                                                    <p class="mb-0 me-2 text-md fw-medium">Тип:</p>
+                                                    <div class="">
+                                                        <button class="bg-transparent p-0 border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            Велосипед
+                                                        </button>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a class="dropdown-item" href="#">Ходьба</a></li>
+                                                            <li><a class="dropdown-item" href="#">Силовые</a></li>
+                                                            <li><a class="dropdown-item" href="#">Плавание</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <button class="btn btn-primary w-100">Сохранить</button>
                                         </div>
                                     </div>
-
                                 </form>
                              </div>
                             <!-- DailyMeasurements -->
-                            <div id="DailyGlucoseChart">
+                            <div id="DailyMeasurements">
                                 <div class="w-100 bg-white rounded-4 mt-lg-0 card-hover p-4">
                                     <div class="d-flex align-items-center justify-content-between flex-wrap mb-4">
                                         <p class="text-2xl fs-extra-smaller fw-semibold mb-0 py-1">Недавняя активность</p>
