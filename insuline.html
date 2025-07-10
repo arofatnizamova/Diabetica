@@ -70,7 +70,7 @@
                                 <button class="bg-transparent border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
                                     <i class="bi bi-list fs-5 opacity-75"></i>
                                 </button>
-                                    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                                    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling">
                                     <div class="offcanvas-header border-bottom">
                                         <div class="d-flex align-items-center gap-2">
                                             <a href="#" class="py-1 px-2 rounded-3 bg-corp fw-bold text-sm text-white">D</a>
@@ -172,7 +172,7 @@
                         </div>
                         <div class="col-xxl-5 col-lg-6">
                             <div class="w-100 h-100  bg-white rounded-4 mt-lg-0 card-hover p-4">
-                                <form action="">
+                                <form>
                                     <div class="row gy-3">
                                         <div class="col-xxl-8">
                                             <p class="mb-3 text-lg fw-medium">Зафиксировать прием</p>
@@ -180,19 +180,21 @@
                                         </div>
                                         <div class="col-xxl-4">
                                             <div class="dropdown text-sm mb-3">
-                                                <button class="bg-transparent p-0 border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Тип: короткий
-                                                </button>
-                                                <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                                </ul>
+                                                <div class="d-flex align-items-center">
+                                                    <p class="mb-0 me-2 text-md fw-medium">Тип:</p>
+                                                    <div class="">
+                                                        <button class="bg-transparent p-0 border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            Короткий
+                                                        </button>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a class="dropdown-item" href="#">Длиный</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <button class="btn btn-primary w-100">Добавить</button>
+                                            <button class="btn btn-primary shadow w-100">Добавить</button>
                                         </div>
                                     </div>
-
                                 </form>
                              </div>
                         </div>
@@ -203,14 +205,12 @@
                                         <div class="d-flex align-items-center gap-3">
                                             <p class="mb-0">Дата:</p>
                                             <div class="calendar-wrapper">
-                                                <input type="text" id="flatpickrInput" class="hidden-input flatpickr-input">
-                                                
-                                                <button type="button" id="calendarButton" class="bg-transparent border-0 p-0">
+                                                <input type="text" class="hidden-input flatpickr-input">
+                                                <button type="button" class="calendar-button bg-transparent border-0 p-0">
                                                     <span>Сегодня</span>
                                                     <i class="bi bi-calendar-event text-gray px-2 py-1 bg-blue rounded-5"></i>
                                                 </button>
                                             </div>
-
                                         </div>
                                     </div>
                                     <ul class="nav custom-beauty nav-pills mb-3" id="pills-tab" role="tablist">
@@ -379,7 +379,7 @@
                                     </div>
                                     <div class="d-flex align-items-center gap-2">
                                         <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" value="" id="checkNativeSwitch" switch="">
+                                            <input class="form-check-input" type="checkbox" value="" id="checkNativeSwitch-1">
                                         </div>
                                         <button class="close-btn-custom"><i class="fa-solid fa-xmark text-gray"></i></button>
                                     </div>
@@ -394,7 +394,7 @@
                                     </div>
                                     <div class="d-flex align-items-center gap-2">
                                         <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" value="" id="checkNativeSwitch" switch="">
+                                            <input class="form-check-input" type="checkbox" value="" id="checkNativeSwitch-2">
                                         </div>
                                         <button class="close-btn-custom"><i class="fa-solid fa-xmark text-gray"></i></button>
                                     </div>
@@ -409,7 +409,7 @@
                                     </div>
                                     <div class="d-flex align-items-center gap-2">
                                         <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" value="" id="checkNativeSwitch" switch="">
+                                            <input class="form-check-input" type="checkbox" value="" id="checkNativeSwitch-3">
                                         </div>
                                         <button class="close-btn-custom"><i class="fa-solid fa-xmark text-gray"></i></button>
                                     </div>
@@ -422,7 +422,7 @@
                                     <form>
                                         <input type="text" class="form-control mb-3" placeholder="Название напоминания">
                                         <input type="time" class="form-control mb-3">
-                                        <select name="" class="form-select text-sm mb-3" id="">
+                                        <select name="notification_name" class="form-select text-sm mb-3" id="notification_name">
                                             <option value="2">Лекарство</option>
                                             <option value="3">Глюкоза</option>
                                             <option value="4">Питание</option>
@@ -444,9 +444,8 @@
                                 <div class="d-flex align-items-center justify-content-between gap-3 mb-4">
                                     <p class="mb-0 fw-semibold text-xl">Расписание на сегодня</p>
                                     <div class="calendar-wrapper">
-                                        <input type="text" id="flatpickrInput" class="hidden-input flatpickr-input">
-                                                
-                                        <button type="button" id="calendarButton" class="bg-transparent border-0 p-0">
+                                        <input type="text" class="hidden-input flatpickr-input">
+                                        <button type="button" class="calendar-button bg-transparent border-0 p-0">
                                             <span>Сегодня</span>
                                             <i class="bi bi-calendar-event text-gray px-2 py-1 bg-blue rounded-5"></i>
                                         </button>

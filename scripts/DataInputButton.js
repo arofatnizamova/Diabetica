@@ -1,7 +1,7 @@
 export function initAllFlatpickrCalendars(options = {}) {
   document.querySelectorAll('.calendar-wrapper').forEach(wrapper => {
-    const input = wrapper.querySelector('#flatpickrInput');
-    const button = wrapper.querySelector('#calendarButton');
+    const input = wrapper.querySelector('.flatpickr-input');
+    const button = wrapper.querySelector('.calendar-button');
 
     if (!input || !button) return;
 

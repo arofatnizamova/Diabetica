@@ -70,7 +70,7 @@
                                 <button class="bg-transparent border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
                                     <i class="bi bi-list fs-5 opacity-75"></i>
                                 </button>
-                                    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                                    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling">
                                     <div class="offcanvas-header border-bottom">
                                         <div class="d-flex align-items-center gap-2">
                                             <a href="#" class="py-1 px-2 rounded-3 bg-corp fw-bold text-sm text-white">D</a>
@@ -222,7 +222,7 @@
                             </div>
                             <!-- input -->
                              <div class="w-100 mb-4 bg-white rounded-4 mt-lg-0 card-hover p-4">
-                                <form action="">
+                                <form>
                                     <div class="row gy-3">
                                         <div class="col-xxl-8">
                                             <p class="mb-3 text-lg fw-medium">Зафиксировать прием пищи</p>
@@ -239,14 +239,13 @@
                                                     <li><a class="dropdown-item" href="#">С камеры</a></li>
                                                 </ul>
                                             </div>
-                                            <button class="btn btn-primary w-100">Сохранить</button>
+                                            <button class="btn btn-primary shadow w-100">Сохранить</button>
                                         </div>
                                     </div>
-
                                 </form>
                              </div>
                              <div class="w-100 mb-4 bg-white rounded-4 mt-lg-0 card-hover p-4">
-                                <form action="">
+                                <form>
                                     <p class="mb-3 text-lg fw-medium">Зафиксировать прием пищи</p>
                                     <div class="row gy-3">
                                         <div class="col-xxl-8">
@@ -264,20 +263,19 @@
                                                     <li><a class="dropdown-item" href="#">С камеры</a></li>
                                                 </ul>
                                             </div>
-                                            <button class="btn btn-primary w-100">Сохранить</button>
+                                            <button class="btn btn-primary shadow w-100">Сохранить</button>
                                         </div>
                                     </div>
-
                                 </form>
                              </div>
                              <div class="w-100 mb-4 bg-white rounded-4 mt-lg-0 card-hover p-4">
-                                <form action="">
+                                <form>
                                     <p class="mb-3 text-lg fw-medium">Зафиксировать прием пищи</p>
                                     <div class="row gy-3">
                                         <div class="col-xxl-8">
                                             <p class="text-gray fs-sm">Выберите из фото</p>
                                             <input type="text" placeholder="MyFood.png" class="form-control input-data-custom">
-                                            <button class="btn btn-primary w-fit-content mt-3 d-lg-block d-none">Сохранить</button>
+                                            <button class="btn btn-primary shadow w-fit-content mt-3 d-lg-block d-none">Сохранить</button>
                                         </div>
                                         <div class="col-xxl-4">
                                             <div class="dropdown text-sm fs-larger mb-3">
@@ -293,17 +291,17 @@
                                             <button class="btn btn-white border-dashed w-100">Сканировать</button>
                                         </div>
                                     </div>
-                                    <button class="btn btn-primary w-lg-fit-content mt-3 d-lg-none d-block">Сохранить</button>
+                                    <button class="btn btn-primary shadow w-lg-fit-content mt-3 d-lg-none d-block">Сохранить</button>
                                 </form>
                              </div>
                              <div class="w-100 mb-4 bg-white rounded-4 mt-lg-0 card-hover p-4">
-                                <form action="">
+                                <form>
                                     <p class="mb-3 text-lg fw-medium">Зафиксировать прием пищи</p>
                                     <div class="row gy-3">
                                         <div class="col-xxl-8">
                                             <p class="text-gray fs-sm">Количество углеводов</p>
                                             <input type="text" placeholder="На фото: 11 гр углеводов" class="form-control input-data-custom">
-                                            <button class="btn btn-primary w-fit-content mt-3 d-lg-block d-none">Сохранить</button>
+                                            <button class="btn btn-primary shadow w-fit-content mt-3 d-lg-block d-none">Сохранить</button>
                                         </div>
                                         <div class="col-xxl-4">
                                             <div class="dropdown text-sm fs-larger mb-3">
@@ -319,7 +317,7 @@
                                             <button class="btn btn-white border-dashed w-100">Открыть камеру</button>
                                         </div>
                                     </div>
-                                    <button class="btn btn-primary w-lg-fit-content mt-3 d-lg-none d-block">Сохранить</button>
+                                    <button class="btn btn-primary shadow w-lg-fit-content mt-3 d-lg-none d-block">Сохранить</button>
                                 </form>
                              </div>
                             <!-- DailyFoodMeasurements -->
@@ -330,14 +328,12 @@
                                         <div class="d-flex align-items-center gap-3">
                                             <p class="mb-0">Дата:</p>
                                             <div class="calendar-wrapper">
-                                                <input type="text" id="flatpickrInput" class="hidden-input">
-                                                
-                                                <button type="button" id="calendarButton" class="bg-transparent border-0 p-0">
+                                                <input type="text" class="flatpickr-input hidden-input">
+                                                <button type="button" class="calendar-button bg-transparent border-0 p-0">
                                                     <span>Сегодня</span>
                                                     <i class="bi bi-calendar-event text-gray px-2 py-1 bg-blue rounded-5"></i>
                                                 </button>
                                             </div>
-
                                         </div>
                                     </div>
                                     <ul class="nav custom-beauty nav-pills mb-3" id="pills-tab" role="tablist">

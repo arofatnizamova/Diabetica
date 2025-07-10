@@ -226,7 +226,7 @@
                                     <div class="row gy-3">
                                         <div class="col-xxl-8">
                                             <p class="mb-3 text-lg fw-medium">Зафиксировать уровень глюкозы</p>
-                                            <label for="glucose-level"></label>
+                                            <label for="glucose-level" class="visually-hidden">Зафиксировать уровень глюкозы</label>
                                             <input type="text" id="glucose-level" placeholder="3 мм/л" class="form-control input-data-custom">
                                             <p class="mb-0 mt-2 text-sm text-danger-custom">Статус: <span class="status">Гипогликемия</span></p>
                                         </div>
@@ -241,7 +241,7 @@
                                                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                                                 </ul>
                                             </div>
-                                            <button class="btn btn-primary w-100">Сохранить</button>
+                                            <button class="btn btn-primary w-100 shadow">Сохранить</button>
                                         </div>
                                     </div>
                                 </form>
@@ -254,8 +254,8 @@
                                         <div class="d-flex align-items-center text-sm gap-3 py-1">
                                             <p class="mb-0">Дата:</p>
                                             <div class="calendar-wrapper">
-                                                <input type="text" id="flatpickrInput" class="hidden-input">   
-                                                <button type="button" id="calendarButton" class="bg-transparent border-0 p-0">
+                                                <input type="text" class="flatpickr-input hidden-input">   
+                                                <button type="button" class="calendar-button bg-transparent border-0 p-0">
                                                     <span>Сегодня</span>
                                                     <i class="bi bi-calendar-event text-gray px-2 py-1 bg-blue rounded-5"></i>
                                                 </button>
