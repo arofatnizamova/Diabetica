@@ -1,7 +1,7 @@
 import { renderGlucoseChart } from './glucose-timeline.js';
 import { updateProgressLines } from './initProgressBars.js';
 import { renderCustomDateInput } from './DataInputCustom.js';
-import { initFlatpickrButton } from './DataInputButton.js';
+import { initAllFlatpickrCalendars } from './DataInputButton.js';
 $(document).ready(function () {
     const labels = Array.from({ length: 30 }, (_, i) => i + 1);
     const seriesData = [
@@ -26,5 +26,5 @@ $(document).ready(function () {
   renderGlucoseChart('glucoseChart', labels, seriesData);
   updateProgressLines();
   renderCustomDateInput('#birthdate');
-  initFlatpickrButton('#flatpickrInput', '#calendarButton');
+  initAllFlatpickrCalendars();
 });
