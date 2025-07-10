@@ -77,17 +77,17 @@
     padding: 5px;
     border-radius: 20px;
 }
-.autarization .form-control {
+.authorization .form-control {
     padding: 15px;
 }
-.autarization .form-control::placeholder {
+.authorization .form-control::placeholder {
     font-size: 1rem !important;
     font-weight: 300;
 }
-.autarization .border-rounded-top {
+.authorization .border-rounded-top {
     border-radius: 10px 10px 0 0;
 }
-.autarization .border-rounded-bottom {
+.authorization .border-rounded-bottom {
     border-radius: 0 0 10px 10px;
 }
 /* .form-check-input {
@@ -176,6 +176,7 @@
     padding: 13px 20px;
     color: var(--color-dark-gray);
 }
+
 @media (min-width: 1400px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
         max-width: 1600px;
