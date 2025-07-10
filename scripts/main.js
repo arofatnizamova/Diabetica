@@ -25,6 +25,6 @@ $(document).ready(function () {
 
   renderGlucoseChart('glucoseChart', labels, seriesData);
   updateProgressLines();
-  renderCustomDateInput('#birthdate');
+  renderCustomDateInput('.birthdate');
   initAllFlatpickrCalendars();
 });

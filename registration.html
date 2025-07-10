@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <section class="">
+    <section>
         <div class="row gx-0">
             <div class="col-lg-6">
                 <img src="images/authorization-and-registration/2.png" alt="" class="d-lg-block d-none w-100 h-100vh img-fluid object-fit-cover">
@@ -47,26 +47,32 @@
                             <div class="row gx-0 justify-content-center">
                                 <div class="col-xxl-8 col-11">
                                     <div class="w-100">
-                                        <form action="" class="registration">
+                                        <form class="registration">
                                             <div class="row gx-sm-2 gx-0 gy-3">
                                                 <div class="col-sm-6">
-                                                    <input name="user_name" type="text" class="form-control" required placeholder="Ф.И.О">
+                                                    <label for="user_name" class="visually-hidden">Ф.И.О</label>
+                                                    <input name="user_name" id="user_name" type="text" class="form-control" required placeholder="Ф.И.О">
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <input name="user_phone" type="tel" class="form-control" placeholder="Номер телефона ">
+                                                    <label for="user_phone" class="visually-hidden">Номер телефона</label>
+                                                    <input name="user_phone" id="user_phone" type="tel" pattern="^\+?[0-9\s\-()]{7,20}$" class="form-control" placeholder="Номер телефона">
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <input name="user_email" type="email" class="form-control" required placeholder="E-mail ">
+                                                    <label for="user_email" class="visually-hidden">E-mail</label>
+                                                    <input name="user_email" id="user_email" type="email" class="form-control" required placeholder="E-mail">
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <input name="user_birthDate" id="birthdate" type="text" class="form-control" placeholder="Дата рождения">
+                                                    <label for="user_birthDate" class="visually-hidden">Дата рождения</label>
+                                                    <input name="user_birthDate"  id="user_birthDate" type="text" required class="form-control birthdate" placeholder="Дата рождения">
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <input name="user_weight" type="number" min="0" class="form-control" required placeholder="Ваш вес">
+                                                    <label for="user_weight" class="visually-hidden">Ваш вес</label>
+                                                    <input name="user_weight" id="user_weight" type="number" min="1" max="200" class="form-control" required placeholder="Ваш вес">
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="select-wrapper position-relative">
-                                                        <select class="form-select text-sm" name="diabetes_type" required>
+                                                        <label for="diabetes_type" class="visually-hidden">Тип диабета</label>
+                                                        <select class="form-select text-sm" id="diabetes_type" name="diabetes_type" required>
                                                             <option value="" disabled selected hidden>Тип диабета</option>
                                                             <option value="type1">Тип 1</option>
                                                             <option value="type2">Тип 2</option>
@@ -76,8 +82,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-12">
-                                                    <div class="d-flex py-4 text-lg align-items-md-center justify-content-between flex-md-row flex-column">
-                                                        <p class="fw-semibold text-gray text-lg mb-md-0 mb-3">Цель:</p>
+                                                    <fieldset class="d-flex py-4 text-lg align-items-md-center justify-content-between flex-md-row flex-column">
+                                                        <legend class="fw-semibold w-fit-content text-gray text-lg mb-md-0 mb-3">Цель:</legend>
                                                         <div class="gap-md-5 gap-2 d-flex flex-sm-row flex-column">
                                                             <label class="d-flex align-items-center gap-2">
                                                                 <input type="checkbox" class="form-check-input mt-0" name="goal[]" value="sugar">
@@ -88,11 +94,12 @@
                                                                 <span class="text-gray">Контроль веса</span>   
                                                             </label>
                                                         </div>
-                                                    </div>
+                                                    </fieldset>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="select-wrapper position-relative">
-                                                        <select class="form-select text-sm" name="diagnosis_year" required>
+                                                        <label for="diagnosis_year" class="visually-hidden">Год постановки диагноза</label>
+                                                        <select class="form-select text-sm" id="diagnosis_year" name="diagnosis_year" required>
                                                             <option value="" disabled selected hidden>Год постановки диагноза</option>
                                                             <option value="2000">2000</option>
                                                             <option value="2002">2002</option>
@@ -101,37 +108,40 @@
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="select-wrapper position-relative">
-                                                        <select class="form-select text-sm" name="current_treatment" required>
+                                                        <label for="current_treatment" class="visually-hidden">Текущее лечение</label>
+                                                        <select class="form-select text-sm" id="current_treatment" name="current_treatment" required>
                                                             <option value="" disabled selected hidden>Текущее лечение </option>
-                                                            <option value="type1">Тип 1</option>
-                                                            <option value="type2">Тип 2</option>
+                                                            <option value="method-1">Лечение 1 </option>
+                                                            <option value="method-2">Лечение 2</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="select-wrapper position-relative">
-                                                        <select class="form-select text-sm" name="sugar_measurements" required>
+                                                        <label for="sugar_measurements" class="visually-hidden">Частота измерений сахара</label>
+                                                        <select class="form-select text-sm" id="sugar_measurements" name="sugar_measurements" required>
                                                             <option value="" disabled selected hidden>Частота измерений сахара</option>
-                                                            <option value="type1">Тип 1</option>
-                                                            <option value="type2">Тип 2</option>
-                                                            <option value="gestational">Гестационный</option>
-                                                            <option value="other">Другой</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="select-wrapper position-relative">
-                                                        <select class="form-select text-sm" name="control_device" required>
+                                                        <label for="control_device" class="visually-hidden">Устройство контроля</label>
+                                                        <select class="form-select text-sm" id="control_device" name="control_device" required>
                                                             <option value="" disabled selected hidden>Устройство контроля</option>
-                                                            <option value="type1">Тип 1</option>
-                                                            <option value="type2">Тип 2</option>
-                                                            <option value="gestational">Гестационный</option>
-                                                            <option value="other">Другой</option>
+                                                            <option value="device-1">Устройство - 1</option>
+                                                            <option value="device-2">Устройство - 2</option>
+                                                            <option value="device-3">Устройство - 3</option>
+                                                            <option value="device-4">Устройство - 4</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <button type="button" class="btn btn-primary mt-4 mx-auto d-block btn-long">Продолжить</button>
+                                            <button type="submit" class="btn btn-primary mt-4 mx-auto d-block btn-long">Продолжить</button>
                                         </form>
                                     </div>
                                 </div>
@@ -141,62 +151,71 @@
                             <div class="row gx-0 justify-content-center">
                                 <div class="col-xxl-8 col-11">
                                     <div class="w-100">
-                                        <form action="" class="registration">
+                                        <form class="registration">
                                             <div class="row justify-content-center gx-sm-2 gx-0 gy-3">
                                                 <div class="col-sm-6">
-                                                    <input name="doctor_name" type="text" class="form-control" required placeholder="Ф.И.О">
+                                                    <label for="doctor_name" class="visually-hidden">Ф.И.О</label>
+                                                    <input name="doctor_name" id="doctor_name" type="text" class="form-control" required placeholder="Ф.И.О">
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <input name="doctor_phone" type="tel" class="form-control" placeholder="Номер телефона ">
+                                                    <label for="doctor_phone" class="visually-hidden">Номер телефона</label>
+                                                    <input name="doctor_phone" id="doctor_phone" type="tel" class="form-control" pattern="^\+?[0-9\s\-()]{7,20}$" placeholder="Номер телефона ">
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <input name="doctor_email" type="email" class="form-control" required placeholder="E-mail ">
+                                                    <label for="doctor_email" class="visually-hidden">E-mail</label>
+                                                    <input name="doctor_email" type="email" id="doctor_email" class="form-control" required placeholder="E-mail ">
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <input name="doctor_birthDate" id="birthdate" type="text" class="form-control" placeholder="Дата рождения">
+                                                    <label for="doctor_birthDate" class="visually-hidden">Дата рождения</label>
+                                                    <input name="doctor_birthDate" id="doctor_birthDate" type="text" class="form-control birthdate" placeholder="Дата рождения">
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="select-wrapper position-relative">
-                                                        <select class="form-select text-sm" name="specialization" required>
+                                                        <label for="specialization" class="visually-hidden">Специальность</label>
+                                                        <select class="form-select text-sm" id="specialization" name="specialization" required>
                                                             <option value="" disabled selected hidden>Специальность</option>
-                                                            <option value="2000">2000</option>
-                                                            <option value="2002">2002</option>
+                                                            <option value="endocrinologist">Эндокринолог</option>
+                                                            <option value="nutritionist">Диетолог</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="select-wrapper position-relative">
-                                                        <select class="form-select text-sm" name="doctors_category" required>
+                                                        <label for="doctors_category" class="visually-hidden">Категория врача</label>
+                                                        <select class="form-select text-sm" id="doctors_category" name="doctors_category" required>
                                                             <option value="" disabled selected hidden>Категория врача </option>
-                                                            <option value="type1">Тип 1</option>
-                                                            <option value="type2">Тип 2</option>
+                                                            <option value="first">Первая категория</option>
+                                                            <option value="highest">Высшая категория</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="select-wrapper position-relative">
-                                                        <select class="form-select text-sm" name="position" required>
+                                                        <label for="position" class="visually-hidden">Должность</label>
+                                                        <select class="form-select text-sm" id="position" name="position" required>
                                                             <option value="" disabled selected hidden>Должность </option>
-                                                            <option value="type1">Тип 1</option>
-                                                            <option value="type2">Тип 2</option>
-                                                            <option value="gestational">Гестационный</option>
-                                                            <option value="other">Другой</option>
+                                                            <option value="doctor">Врач</option>
+                                                            <option value="head_of_department">Заведующий отделением</option>
+                                                            <option value="chief_physician">Главный врач</option>
+                                                            <option value="other">Другое</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="select-wrapper position-relative">
-                                                        <select class="form-select text-sm" name="work_experience" required>
+                                                        <label for="work_experience" class="visually-hidden">Опыт работы</label>
+                                                        <select class="form-select text-sm" id="work_experience" name="work_experience" required>
                                                             <option value="" disabled selected hidden>Опыт работы </option>
-                                                            <option value="type1">Тип 1</option>
-                                                            <option value="type2">Тип 2</option>
-                                                            <option value="gestational">Гестационный</option>
-                                                            <option value="other">Другой</option>
+                                                            <option value="0-1">Менее 1 года</option>
+                                                            <option value="1-3">1–3 года</option>
+                                                            <option value="3-5">3–5 лет</option>
+                                                            <option value="5-10">5–10 лет</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <input name="licence" type="text"  class="form-control" required placeholder="Лицензия">
+                                                    <label for="licence" class="visually-hidden">Лицензия</label>
+                                                    <input name="licence" id="licence" type="text"  class="form-control" required placeholder="Лицензия">
                                                 </div>
                                             </div>
                                             <button type="submit" class="btn btn-primary mt-4 mx-auto d-block btn-long">Продолжить</button>
