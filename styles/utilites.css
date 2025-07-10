@@ -19,6 +19,9 @@
 .text-dirt{
     color: var(--color-dirt);
 }
+.text-dark-gray{
+    color: var(--color-dark-gray);
+}
 .text-danger-custom{
     color: #FF7272;
 }

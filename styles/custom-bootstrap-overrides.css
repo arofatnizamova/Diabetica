@@ -90,12 +90,20 @@
 .autarization .border-rounded-bottom {
     border-radius: 0 0 10px 10px;
 }
-.form-check-input {
+/* .form-check-input {
     width: 1.6em;
     height: 1.3em;
 }
 .form-check-input[type=checkbox] {
     border-radius: .6em;
+} */
+
+.form-check-input:checked {
+    background-color: var(--color-corp);
+    border-color: var(--color-corp);
+}
+.form-check-input{
+    margin-top: 0;
 }
 .registration .form-control{
     border: none;
@@ -109,7 +117,7 @@
     font-size: 1rem;
     color: var(--color-gray);
 }
-.form-check-input:focus {
+/* .form-check-input:focus {
     border-color: #BFBFBF;
     box-shadow: none;
 }
@@ -120,7 +128,7 @@
 .form-check-input:checked {
     background-color: white;
     border-color: var(--color-corp);
-}
+} */
 .registration .form-select, .choices__inner {
     position: relative;
     border: none;
@@ -131,7 +139,7 @@
     color: var(--color-gray);
     font-weight: 300;
 }
-.registration .select-wrapper::after{
+.select-wrapper::after{
     position: absolute;
     content: "\F282";
     font-family: 'bootstrap-icons';
@@ -159,6 +167,14 @@
     border: none;
     border-radius: 15px;
     box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+.settings .form-control, .settings .form-select{
+    font-size: 0.98rem;
+    border-radius: 15px;
+    background: #f1f5f9;
+    border: none;
+    padding: 13px 20px;
+    color: var(--color-dark-gray);
 }
 @media (min-width: 1400px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
