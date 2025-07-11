@@ -2,21 +2,7 @@
     <div class="row  gy-4">
         <div class="col-xxl-5 col-lg-6">
             <!-- info -->
-            <div class="w-100 h-100 bg-white rounded-4 mt-lg-0 card-hover p-4">
-                <div class="row gx-0">
-                    <div class="col-8">
-                        <div class="w-100 h-100 d-flex flex-column justify-content-center py-3">
-                            <h2 class="fs-smaller">Инсулин и лекарства</h2>
-                            <p class="text-lg fs-smaller lh-sm mb-0">Управляйте приемом лекарств и инсулина</p>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="w-100 h-100 d-flex align-items-center justify-content-center">
-                            <img src="../assets/images/men.png" alt="" class="img-fluid">
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <InfoCard title="Инсулин и лекарства" subtitle="Управляйте приемом лекарств и инсулина" :image="imageSrc" />
         </div>
         <div class="col-xxl-5 col-lg-6">
             <div class="w-100 h-100  bg-white rounded-4 mt-lg-0 card-hover p-4">
@@ -445,3 +431,7 @@
         </div>
     </div>
 </template>
+<script setup>
+import InfoCard from '@/components/InfoCard.vue';
+import imageSrc from '@/assets/images/men.png'
+</script>

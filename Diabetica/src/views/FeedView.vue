@@ -2,21 +2,7 @@
     <div class="row gy-xl-0 gy-4">
         <div class="col-xl-5">
             <!-- info -->
-            <div class="w-100 mb-4 bg-white rounded-4 mt-lg-0 card-hover p-4">
-                <div class="row gx-0">
-                    <div class="col-8">
-                        <div class="w-100 h-100 d-flex flex-column justify-content-center py-3">
-                            <h2 class="fs-smaller">Дневник питания</h2>
-                            <p class="text-lg fs-smaller lh-sm mb-0">Записывайте и анализируйте свой рацион</p>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="w-100 h-100 d-flex align-items-center justify-content-center">
-                            <img src="../assets/images/men.png" alt="" class="img-fluid">
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <InfoCard title="Дневник питания" subtitle="Записывайте и анализируйте свой рацион" :image="imageSrc" />
             <!-- MetricsCards mobile -->
             <div id="MetricsCards-desctop">
                 <div class="d-lg-none d-block mb-4">
@@ -348,3 +334,7 @@
         </div>
     </div>
 </template>
+<script setup>
+import InfoCard from '@/components/InfoCard.vue';
+import imageSrc from '@/assets/images/men.png'
+</script>
