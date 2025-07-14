@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Layout from '@/layouts/Layout.vue'
+import Registration from '@/views/Registration.vue'
+import Login from '@/views/Login.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -44,8 +46,29 @@ const router = createRouter({
           component: () => import('@/views/SettingsView.vue')
         }
       ]
+    },
+    {
+      path: '/registration',
+      name: 'registration',
+      component: Registration
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login
     }
   ]
 })
+router.beforeEach((to, from, next) => {
+  const user = JSON.parse(localStorage.getItem('user'));
 
+  if (!user?.id && to.path !== '/login' && to.path !== '/registration') {
+    next('/login');
+  }
+  else if (user?.id && (to.path === '/login' || to.path === '/registration')) {
+    next('/');
+  } else {
+    next(); 
+  }
+});
 export default router

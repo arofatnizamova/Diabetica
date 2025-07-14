@@ -25,7 +25,7 @@ export default {
                 {
                     max: 3.9,
                     status: 'Гипогликемия',
-                    textClass: 'text-info',
+                    textClass: 'text-info-custom',
                     bgClass: 'bg-blue text-info-custom'
                 },
                 {
