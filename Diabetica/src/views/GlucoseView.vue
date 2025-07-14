@@ -144,8 +144,21 @@
         </div>
     </div>
 </template>
-<script setup>
+<script>
 import InfoCard from '@/components/InfoCard.vue';
 import GlucoseMeasurement from '@/components/GlucoseMeasurement.vue';
-import imageSrc from '@/assets/images/men.png'
+import imageSrc from '@/assets/images/men.png';
+
+export default {
+    name: 'GlucoseView',
+    components: {
+        InfoCard,
+        GlucoseMeasurement
+    },
+    data() {
+        return {
+            imageSrc
+        };
+    }
+};
 </script>

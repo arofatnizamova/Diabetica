@@ -4,13 +4,16 @@
             <div class="">
                 <h1 class="text-xl fw-bold text-corp mb-0 d-lg-block d-none">Diabetica</h1>
                 <div class="d-lg-none d-block">
-                    <button class="bg-transparent border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                    <button class="bg-transparent border-0" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
                         <i class="bi bi-list fs-5 opacity-75"></i>
                     </button>
-                        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling">
+                    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                        id="offcanvasScrolling">
                         <div class="offcanvas-header border-bottom">
                             <div class="d-flex align-items-center gap-2">
-                                <RouterLink to="/" class="py-1 px-2 rounded-3 bg-corp fw-bold text-sm text-white">D</RouterLink>
+                                <RouterLink to="/" class="py-1 px-2 rounded-3 bg-corp fw-bold text-sm text-white">D
+                                </RouterLink>
                                 <RouterLink to="/" class="fw-bold text-xl">Diabetica</RouterLink>
                             </div>
                             <button type="button" class="btn-close mb-1" data-bs-dismiss="offcanvas" aria-label="Close">
@@ -25,27 +28,33 @@
                                             <i class="fa-solid fa-house-user fs-5"></i>
                                             <span>Обзор</span>
                                         </RouterLink>
-                                        <RouterLink to="/glucose" class="d-flex align-items-center gap-2 mb-3 link-hover p-2">
+                                        <RouterLink to="/glucose"
+                                            class="d-flex align-items-center gap-2 mb-3 link-hover p-2">
                                             <i class="fa-solid fa-chart-pie fs-5"></i>
                                             <span>Глюкоза</span>
                                         </RouterLink>
-                                        <RouterLink to="/feed" class="d-flex align-items-center gap-2 mb-3 link-hover p-2">
+                                        <RouterLink to="/feed"
+                                            class="d-flex align-items-center gap-2 mb-3 link-hover p-2">
                                             <i class="fa-solid fa-apple-whole fs-5"></i>
                                             <span>Питание</span>
                                         </RouterLink>
-                                        <RouterLink to="/insuline" class="d-flex align-items-center gap-2 mb-3 link-hover p-2">
+                                        <RouterLink to="/insuline"
+                                            class="d-flex align-items-center gap-2 mb-3 link-hover p-2">
                                             <i class="fa-solid fa-calendar fs-5"></i>
                                             <span>Инсулин</span>
                                         </RouterLink>
-                                        <RouterLink to="/report" class="d-flex align-items-center gap-2 mb-3 link-hover p-2">
+                                        <RouterLink to="/report"
+                                            class="d-flex align-items-center gap-2 mb-3 link-hover p-2">
                                             <i class="fa-solid fa-file fs-5"></i>
                                             <span>Отчет</span>
                                         </RouterLink>
-                                        <RouterLink to="/activity" class="d-flex align-items-center gap-2 mb-3 link-hover p-2">
+                                        <RouterLink to="/activity"
+                                            class="d-flex align-items-center gap-2 mb-3 link-hover p-2">
                                             <i class="fa-solid fa-heart-pulse fs-5"></i>
                                             <span>Активность</span>
                                         </RouterLink>
-                                        <RouterLink to="/setting" class="d-flex align-items-center gap-2 mb-3 link-hover p-2">
+                                        <RouterLink to="/setting"
+                                            class="d-flex align-items-center gap-2 mb-3 link-hover p-2">
                                             <i class="fa-solid fa-gear fs-5"></i>
                                             <span>Настройки</span>
                                         </RouterLink>
@@ -69,9 +78,11 @@
                     </a>
                 </div>
                 <div class="dropdown">
-                    <button class="bg-transparent p-0 border-0 dropdown-toggle position-relative notifications" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="bg-transparent p-0 border-0 dropdown-toggle position-relative notifications"
+                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-bell"></i>
-                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
                             <span class="visually-hidden">New alerts</span>
                         </span>
                     </button>
@@ -86,6 +97,6 @@
     </div>
 </template>
 
-<script setup>
-    import { RouterLink } from 'vue-router'
+<script>
+
 </script>

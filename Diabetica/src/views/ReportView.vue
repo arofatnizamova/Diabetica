@@ -113,7 +113,19 @@
         </div>
     </div>
 </template>
-<script setup>
+<script>
 import InfoCard from '@/components/InfoCard.vue';
 import imageSrc from '@/assets/images/men.png'
+
+export default {
+    name: 'ReportView',
+    components: {
+        InfoCard
+    },
+    data() {
+        return {
+            imageSrc
+        };
+    }
+}
 </script>

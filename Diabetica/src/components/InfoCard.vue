@@ -15,10 +15,13 @@
         </div>
     </div>
 </template>
-<script setup>
-const props = defineProps({
-    title: String,
-    subtitle: String,
-    image: String
-})
+<script>
+export default {
+    name: 'InfoCard',
+    props: {
+        title: String,
+        subtitle: String,
+        image: String
+    }
+};
 </script>

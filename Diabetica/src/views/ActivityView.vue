@@ -70,7 +70,7 @@
                         <div class="col-xxl-8">
                             <p class="mb-3 text-lg fw-medium">Зафиксировать активность</p>
                             <label for="activity_time" class="visually-hidden">Зафиксировать активность</label>
-                            <input type="text" id="activity_time" placeholder="Время: 20 мин"
+                            <input type="text" ref="activityInput" id="activity_time" placeholder="Время: 20 мин"
                                 class="form-control input-data-custom">
                         </div>
                         <div class="col-xxl-4">
@@ -189,7 +189,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="btn btn-primary text-sm w-100" type="button">
+                    <button class="btn btn-primary text-sm w-100" type="button" @click="focusActivityInput">
                         <i class="fa-solid fa-plus me-2"></i>
                         <span class="fw-medium">Добавить активность</span>
                     </button>
@@ -281,7 +281,23 @@
         </div>
     </div>
 </template>
-<script setup>
+<script>
 import InfoCard from '@/components/InfoCard.vue';
 import imageSrc from '@/assets/images/men.png'
+export default {
+    name: 'ActivityView',
+    components: {
+        InfoCard
+    },
+    data() {
+        return {
+            imageSrc
+        };
+    },
+    methods: {
+        focusActivityInput() {
+            this.$refs.activityInput?.focus();
+        }
+    }
+}
 </script>

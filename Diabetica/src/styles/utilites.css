@@ -25,6 +25,9 @@
 .text-danger-custom{
     color: #FF7272;
 }
+.text-info-custom {
+    color: #1E3A8A;
+}
 .bg-corp{
     background: var(--color-corp);
 }

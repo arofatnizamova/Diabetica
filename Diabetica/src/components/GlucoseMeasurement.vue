@@ -8,11 +8,9 @@
                     <label for="glucose-level" class="visually-hidden">Зафиксировать уровень глюкозы</label>
                     <input type="number" id="glucose-level" v-model="glucoseLevel" placeholder="3 мм/л"
                         class="form-control input-data-custom" />
-                    <p v-if="glucoseLevel.trim() !== ''" class="mb-0 mt-2 text-sm" :class="getTextClass(statusValue)">
-                        Статус:
-                        <span class="status">{{ status }}</span>
-                    </p>
+                    <GlucoseStatus v-if="glucoseLevel !== ''" :level="parseFloat(glucoseLevel)" />
                 </div>
+
                 <div class="col-xxl-4">
                     <div class="dropdown text-sm mb-3">
                         <button class="bg-transparent p-0 border-0 dropdown-toggle" type="button"
@@ -49,61 +47,59 @@
                     </div>
                 </div>
             </div>
+
             <div v-for="(item, index) in measurements" :key="index"
                 class="card-hover-bg rounded-4 mb-2 p-3 d-flex justify-content-between">
-                <div class="d-flex align-items-center gap-3">
-                    <span :class="getBgClass(item.level) + ' p-2 fw-semibold rounded-3'">
-                        {{ item.level }}
-                    </span>
+                <GlucoseStatus :level="parseFloat(item.level)" :inline="false" v-slot="{ info }">
                     <div class="d-flex align-items-center gap-3">
-                        <p class="text-sm mb-1 fw-semibold">{{ item.time }}</p>
-                        <span :class="getTextClass(item.level) + ' text-sm'">
-                            {{ getStatus(item.level) }}
+                        <span :class="info.bgClass + ' p-2 fw-semibold rounded-3'">
+                            {{ item.level }}
                         </span>
+                        <div class="d-flex align-items-center gap-3">
+                            <p class="text-sm mb-1 fw-semibold">{{ item.time }}</p>
+                            <span :class="info.textClass + ' text-sm'">
+                                {{ info.status }}
+                            </span>
+                        </div>
                     </div>
-                </div>
+                </GlucoseStatus>
             </div>
         </div>
     </div>
 </template>
 
-<script setup>
-import { ref, computed, onMounted } from 'vue';
+<script>
+import GlucoseStatus from '@/components/GlucoseStatus.vue';
 
-const glucoseLevel = ref('');
-const measurements = ref([]);
-
-const saveMeasurement = () => {
-    const level = parseFloat(glucoseLevel.value);
-    if (!isNaN(level)) {
-        const now = new Date();
-        const time = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-        const newEntry = { level: level.toFixed(1), time };
-        measurements.value.unshift(newEntry);
-        localStorage.setItem('glucoseHistory', JSON.stringify(measurements.value));
-        glucoseLevel.value = '';
+export default {
+    name: 'GlucoseMeasurement',
+    components: {
+        GlucoseStatus
+    },
+    data() {
+        return {
+            glucoseLevel: '',
+            measurements: []
+        };
+    },
+    methods: {
+        saveMeasurement() {
+            const level = parseFloat(this.glucoseLevel);
+            if (!isNaN(level)) {
+                const now = new Date();
+                const time = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                const newEntry = { level: level.toFixed(1), time };
+                this.measurements.unshift(newEntry);
+                localStorage.setItem('glucoseHistory', JSON.stringify(this.measurements));
+                this.glucoseLevel = '';
+            }
+        }
+    },
+    mounted() {
+        const stored = localStorage.getItem('glucoseHistory');
+        if (stored) {
+            this.measurements = JSON.parse(stored);
+        }
     }
 };
-
-onMounted(() => {
-    const stored = localStorage.getItem('glucoseHistory');
-    if (stored) {
-        measurements.value = JSON.parse(stored);
-    }
-});
-
-const getStatus = (level) => {
-    return level < 3.9 ? 'Гипогликемия' : level > 7.8 ? 'Гипергликемия' : 'В Норме';
-};
-
-const getTextClass = (level) => {
-    return level < 3.9 || level > 7.8 ? 'text-danger-custom' : 'text-green';
-};
-
-const getBgClass = (level) => {
-    return level < 3.9 || level > 7.8 ? 'bg-red text-danger-custom' : 'bg-green text-green';
-};
-
-const statusValue = computed(() => parseFloat(glucoseLevel.value));
-const status = computed(() => getStatus(statusValue.value));
 </script>

@@ -22,7 +22,14 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import Navigation from '@/components/Navigation.vue';
 import Header from '@/components/Header.vue';
+export default {
+  name: 'Layout',
+  components: {
+    Navigation,
+    Header
+  }
+}
 </script>
