@@ -60,7 +60,9 @@
                     <div class="row gy-3">
                         <div class="col-xxl-8">
                             <p class="mb-3 text-lg fw-medium">Зафиксировать прием пищи</p>
-                            <input type="text" placeholder="120 г" class="form-control input-data-custom">
+                            <input type="text" placeholder="Название блюда" class="form-control input-data-custom">
+                            <input type="text" placeholder="Количество углеводов (г)"
+                                class="form-control mt-2 input-data-custom">
                         </div>
                         <div class="col-xxl-4">
                             <div class="dropdown text-sm fs-larger mb-3">

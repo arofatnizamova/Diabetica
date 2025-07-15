@@ -12,9 +12,11 @@
                 </div>
 
                 <div class="col-xxl-4">
-                    <button class="btn btn-primary w-100 shadow" type="submit">
-                        Сохранить
-                    </button>
+                    <div class="w-100 h-100 d-flex">
+                        <button class="btn btn-primary mt-auto w-100 shadow" type="submit">
+                            Сохранить
+                        </button>
+                    </div>
                 </div>
             </div>
         </form>
