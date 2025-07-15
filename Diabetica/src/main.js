@@ -11,6 +11,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css'
 // Flatpickr
 import 'flatpickr/dist/flatpickr.min.css'
 import flatpickr from 'flatpickr'
+import { Russian } from 'flatpickr/dist/l10n/ru.js'
 
 // ApexCharts
 import ApexCharts from 'apexcharts'

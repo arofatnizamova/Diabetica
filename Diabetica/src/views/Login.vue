@@ -6,13 +6,13 @@
                     <h1 class="mb-5 text-gray">Авторизация</h1>
                     <div class="row justify-content-center w-100">
                         <div class="col-xxl-4 col-xl-6 col-lg-8 col-10">
-                            <form class="authorization w-100">
+                            <form class="authorization w-100" @submit.prevent="submit">
                                 <label for="login" class="visually-hidden">Email</label>
-                                <input type="text" id="login" name="login" required
+                                <input type="text" id="login" v-model="form.email" required
                                     class="form-control input-data-custom mb-3 "
                                     placeholder="E-mail или номер телефона">
                                 <label for="password" class="visually-hidden">Password</label>
-                                <input type="password" id="password" name="password" required
+                                <input type="password" id="password" v-model="form.password" required
                                     class="form-control input-data-custom" placeholder="Пароль">
                                 <div class="my-3 form-check d-flex gap-2 align-items-center">
                                     <input type="checkbox" class="form-check-input" id="rememberMe">
@@ -39,3 +39,45 @@
         </div>
     </section>
 </template>
+<script>
+export default {
+    data() {
+        return {
+            form: {
+                'email': '',
+                'password': ''
+            }
+        }
+    },
+    methods: {
+        async submit() {
+            try {
+                const formData = new FormData();
+                for (const key in this.form) {
+                    formData.append(key, this.form[key]);
+                }
+                const response = await fetch('https://059.uz/api/auth', {
+                    method: 'POST',
+                    body: formData
+                })
+                const result = await response.json();
+
+                if (result && result.token && result.user) {
+                    localStorage.setItem('user', JSON.stringify({
+                        id: result.user.id,
+                        type: result.user.role === 'P' ? 'patient' : 'doctor',
+                        token: result.token
+                    }));
+
+                    this.$router.push('/');
+                } else {
+                    alert('Неверный логин или пароль');
+                }
+            } catch (error) {
+                console.error('Ошибка при авторизации:', error);
+                alert('Произошла ошибка. Попробуйте позже.');
+            }
+        }
+    }
+}
+</script>
