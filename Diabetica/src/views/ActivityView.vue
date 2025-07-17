@@ -5,130 +5,13 @@
             <InfoCard title="Физическая активноcть" subtitle="Отслеживайте свою активность и пргоресс"
                 :image="imageSrc" />
             <!-- MetricsCards mobile -->
-            <div id="MetricsCards-mobile">
-                <div class="d-lg-none d-block mb-4">
-                    <div class="row gx-sm-3 gx-2 gy-3">
-                        <div class="col-6">
-                            <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover">
-                                <div class="d-flex justify-content-between">
-                                    <p class="opacity-75 fw-semibold mb-1 text-md fs-extra-smaller">Шагов сегодня</p>
-                                    <div class="text-primary bg-blue p-sm-2 p-1 rounded-3 h-fit-content">
-                                        <i class="fa-solid fa-heart-pulse fs-5"></i>
-                                    </div>
-                                </div>
-                                <div class="card-progress">
-                                    <p class="text-xl fs-extra-smaller fw-bold mb-0">3,845</p>
-                                    <div class="progress-line my-2">
-                                        <div class="progress-line-inside" style="width: 32%;">
-                                        </div>
-                                    </div>
-                                    <span class="text-sm fs-extra-smaller text-corp" data-percent="38">38% от цели
-                                        (10,000)</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover">
-                                <div class="d-flex justify-content-between">
-                                    <p class="opacity-75 fw-semibold mb-1 text-md fs-extra-smaller">Активные калории</p>
-                                    <div class="text-success bg-green p-sm-2 p-1 rounded-3 h-fit-content">
-                                        <i class="fa-solid fa-heart-pulse fs-5"></i>
-                                    </div>
-                                </div>
-                                <p class="text-xl fs-extra-smaller fw-bold mb-0">245 ккал</p>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover">
-                                <div class="d-flex justify-content-between">
-                                    <p class="opacity-75 fw-semibold mb-1 text-md fs-extra-smaller">Активное время</p>
-                                    <div class="text-warning bg-yellow p-sm-2 p-1 rounded-3 h-fit-content">
-                                        <i class="fa-solid fa-heart-pulse fs-5"></i>
-                                    </div>
-                                </div>
-                                <p class="text-xl fs-extra-smaller fw-bold mb-0">32 мин</p>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="w-100 h-100 bg-white rounded-3 p-3 card-hover">
-                                <div class="d-flex justify-content-between">
-                                    <p class="opacity-75 fw-semibold mb-1 text-md fs-extra-smaller">Средний пульс</p>
-                                    <div class="text-primary bg-blue p-sm-2 p-1 rounded-3 h-fit-content">
-                                        <i class="fa-solid fa-heart-pulse fs-5"></i>
-                                    </div>
-                                </div>
-                                <p class="text-xl fs-extra-smaller fw-bold mb-0">72 уд/мин</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <ActivityMetricCards displayClass="d-lg-none d-block"/>
             <!-- input -->
             <ActivityMeasurement />
         </div>
         <div class="col-xxl-7 col-xl-6">
             <!-- MetricsCards desctop -->
-            <div id="MetricsCards-desctop">
-                <div class="d-lg-block d-none">
-                    <div class="row gx-sm-3 gx-2 gy-3">
-                        <div class="col-6">
-                            <div
-                                class="w-100 h-100 bg-white rounded-3 p-3 card-hover text-sm d-flex justify-content-between">
-                                <div class="">
-                                    <p class="opacity-75 fw-semibold mb-1 text-md fs-extra-smaller">Шагов сегодня</p>
-                                    <div class="card-progress">
-                                        <p class="text-xl fs-extra-smaller fw-bold mb-0">3,845</p>
-                                        <div class="progress-line my-2">
-                                            <div class="progress-line-inside" style="width: 32%;">
-                                            </div>
-                                        </div>
-                                        <span class="text-sm text-corp" data-percent="38">38% от цели (10,000)</span>
-                                    </div>
-                                </div>
-                                <div class="text-primary bg-blue p-sm-2 p-1 rounded-3 h-fit-content">
-                                    <i class="fa-solid fa-heart-pulse fs-5"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div
-                                class="w-100 h-100 bg-white rounded-3 p-3 card-hover text-sm d-flex justify-content-between">
-                                <div>
-                                    <p class="opacity-75 fw-semibold mb-1 text-md fs-extra-smaller">Активные калории</p>
-                                    <p class="text-xl fs-extra-smaller fw-bold mb-0">245 ккал</p>
-                                </div>
-                                <div class="text-success bg-green p-sm-2 p-1 rounded-3 h-fit-content">
-                                    <i class="fa-solid fa-heart-pulse fs-5"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div
-                                class="w-100 h-100 bg-white rounded-3 p-3 card-hover text-sm d-flex justify-content-between">
-                                <div>
-                                    <p class="opacity-75 fw-semibold mb-1 text-md fs-extra-smaller">Активное время</p>
-                                    <p class="text-xl fs-extra-smaller fw-bold mb-0">32 мин</p>
-                                </div>
-                                <div class="text-warning bg-yellow p-sm-2 p-1 rounded-3 h-fit-content">
-                                    <i class="fa-solid fa-heart-pulse fs-5"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div
-                                class="w-100 h-100 bg-white rounded-3 p-3 card-hover text-sm d-flex justify-content-between">
-                                <div>
-                                    <p class="opacity-75 fw-semibold mb-1 text-md fs-extra-smaller">Средний пульс</p>
-                                    <p class="text-xl fs-extra-smaller fw-bold mb-0">72 уд/мин</p>
-                                </div>
-                                <div class="text-primary bg-blue p-sm-2 p-1 rounded-3 h-fit-content">
-                                    <i class="fa-solid fa-heart-pulse fs-5"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <ActivityMetricCards displayClass="d-lg-block d-none"/>
             <!-- DailyGlucoseChart -->
             <div id="DailyGlucoseChart">
                 <div class="mt-sm-4 mt-2 bg-white mb-sm-3 rounded-4 p-3 card-hover">
@@ -155,11 +38,13 @@
 import InfoCard from '@/components/InfoCard.vue';
 import imageSrc from '@/assets/images/men.png';
 import ActivityMeasurement from '@/components/ActivityMeasurement.vue';
+import ActivityMetricCards from '@/components/ActivityMetricCards.vue';
 export default {
     name: 'ActivityView',
     components: {
         InfoCard,
-        ActivityMeasurement
+        ActivityMeasurement,
+        ActivityMetricCards
     },
     data() {
         return {

@@ -5,7 +5,7 @@
             <InfoCard title="Инсулин и лекарства" subtitle="Управляйте приемом лекарств и инсулина" :image="imageSrc" />
         </div>
         <div class="col-xxl-5 col-lg-6">
-            <div class="w-100 h-100  bg-white rounded-4 mt-lg-0 card-hover p-4">
+            <div class="w-100  bg-white rounded-4 mt-lg-0 card-hover p-4">
                 <form>
                     <div class="row gy-3">
                         <div class="col-xxl-8">
