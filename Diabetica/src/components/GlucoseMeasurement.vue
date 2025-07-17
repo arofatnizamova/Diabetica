@@ -13,9 +13,7 @@
 
                 <div class="col-xxl-4">
                     <div class="w-100 h-100 d-flex">
-                        <button class="btn btn-primary mt-auto w-100 shadow" type="submit">
-                            Сохранить
-                        </button>
+                        <button class="btn btn-primary mt-auto shadow w-100" :disabled="isLoading">{{ isLoading ? 'Сохранение...' : 'Сохранить' }}</button>
                     </div>
                 </div>
             </div>
@@ -39,7 +37,9 @@
                 </div>
             </div>
 
-            <div v-for="(item, index) in measurements" :key="index"
+            
+            <template v-if="measurements.length > 0">
+                <div v-for="(item, index) in measurements" :key="index"
                 class="card-hover-bg rounded-4 mb-2 p-3 d-flex justify-content-between">
                 <GlucoseStatus :level="parseFloat(item.value)" :inline="false" v-slot="{ info }">
                     <div class="d-flex align-items-center gap-3">
@@ -54,6 +54,10 @@
                         </div>
                     </div>
                 </GlucoseStatus>
+            </div>
+            </template>
+            <div v-else class="text-center  py-4">
+                <p>Нет данных о измерениях</p>
             </div>
         </div>
     </div>
@@ -73,6 +77,7 @@ export default {
             glucoseLevel: '',
             selectedDate: '',
             calendarLabel: 'Сегодня',
+            isLoading: false,
             measurements: [],
         };
     },
@@ -90,6 +95,7 @@ export default {
             }
 
             try {
+                this.isLoading = true;
                 const formData = new FormData();
                 formData.append('user_id', userId);
                 formData.append('value', level.toFixed(1));
@@ -110,6 +116,8 @@ export default {
             } catch (err) {
                 console.error(err);
                 alert('Ошибка сети при отправке замера');
+            }finally {
+                this.isLoading = false;
             }
         },
 
