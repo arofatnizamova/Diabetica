@@ -10,96 +10,7 @@
                     </div>
                 </div>
                 <!-- form -->
-                <div class="w-100 mb-4 bg-white rounded-4 mt-lg-0 card-hover p-4">
-                    <div class="d-flex align-items-center gap-3 mb-4">
-                        <i class="fa-solid fa-user text-corp bg-blue p-3 rounded-3"></i>
-                        <p class="fw-semibold text-xl mb-0">Профиль</p>
-                    </div>
-                    <form class="settings">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="w-100">
-                                    <div class="mb-3">
-                                        <label for="firstName" class="form-label">Имя</label>
-                                        <input type="text" name="first_name" class="form-control" value="Дмитрий"
-                                            id="firstName" placeholder="Введите ваше имя">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="w-100">
-                                    <div class="mb-3">
-                                        <label for="lastName" class="form-label">Фамилия</label>
-                                        <input type="text" name="last_name" class="form-control" value="Петров"
-                                            id="lastName" placeholder="Введите вашу фамилию">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="w-100">
-                                    <div class="mb-3">
-                                        <label for="email" class="form-label">Почта</label>
-                                        <input type="email" name="email" class="form-control" value="dmitry@example.com"
-                                            id="email" placeholder="Введите вашу почту">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="w-100">
-                                    <div class="mb-3">
-                                        <label for="phone" class="form-label">Телефон</label>
-                                        <input type="tel" name="phone" class="form-control" value="+998 (99) 909-90-19"
-                                            id="phone" placeholder="Введите номер телефона">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="w-100">
-                                    <div class="mb-3">
-                                        <label for="birthdate" class="form-label">Дата рождения</label>
-                                        <input type="text" name="birthdate" class="form-control birthdate"
-                                            value="15.06.1985" id="birthdate">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="w-100">
-                                    <div class="mb-3">
-                                        <label for="height" class="form-label">Рост (см)</label>
-                                        <input type="number" name="height" class="form-control" value="195" id="height">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="w-100">
-                                    <div class="mb-3">
-                                        <label for="weight" class="form-label">Вес (кг)</label>
-                                        <input type="number" name="weight" class="form-control" min="1" value="96"
-                                            id="weight">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="w-100">
-                                    <div class="mb-3">
-                                        <label for="diabetesType" class="form-label">Тип диабета</label>
-                                        <div class="select-wrapper position-relative">
-                                            <select class="form-select text-sm" name="diabetes_type" id="diabetesType"
-                                                required>
-                                                <option value="" disabled selected hidden>Тип диабета</option>
-                                                <option value="type1">Тип 1</option>
-                                                <option value="type2">Тип 2</option>
-                                                <option value="gestational">Гестационный</option>
-                                                <option value="other">Другой</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary shadow mt-3">Сохранить изменения</button>
-                    </form>
-                </div>
+                <ProfileSettings />
                 <div class="w-100 mb-4 bg-white rounded-4 mt-lg-0 card-hover p-4">
                     <div class="d-flex align-items-center gap-3 mb-4">
                         <i class="fa-solid fa-bell text-corp bg-blue p-3 rounded-3"></i>
@@ -226,6 +137,29 @@
                         <button type="submit" class="btn btn-primary shadow mt-3">Сохранить изменения</button>
                     </form>
                 </div>
+                <div class="mt-4 text-lg">
+                    <button class="btn btn-danger rounded-5" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                        Выйти из аккаунта
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Модальное окно -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoutModalLabel">Подтверждение выхода</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    Вы действительно хотите выйти из аккаунта?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                    <button type="button" class="btn btn-danger" @click="logout">Выйти</button>
+                </div>
             </div>
         </div>
     </div>
@@ -233,16 +167,24 @@
 <script>
 import InfoCard from '@/components/InfoCard.vue';
 import imageSrc from '@/assets/images/men.png'
+import ProfileSettings from '@/components/ProfileSettings.vue';
 
 export default {
     name: 'SettingsView',
     components: {
-        InfoCard
+        InfoCard,
+        ProfileSettings
     },
     data() {
         return {
             imageSrc
         };
+    },
+    methods: {
+        logout() {
+            localStorage.removeItem('user');
+            location.reload();
+        }
     }
 }
 </script>

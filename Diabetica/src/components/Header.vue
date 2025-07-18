@@ -73,9 +73,10 @@
             </div>
             <div class="d-flex align-items-center gap-3">
                 <div class="">
-                    <a href="authorization.html" class="btn d-flex align-items-center">
-                        <i class="bi bi-person-circle me-2 opacity-75"></i> <span class="fw-medium text-sm">Войти</span>
-                    </a>
+                    <RouterLink to="/setting" class="btn d-flex align-items-center">
+                        <i class="bi bi-person-circle me-2 opacity-75"></i> <span class="fw-medium text-sm">{{ userName
+                        }}</span>
+                    </RouterLink>
                 </div>
                 <div class="dropdown">
                     <button class="bg-transparent p-0 border-0 dropdown-toggle position-relative notifications"
@@ -98,5 +99,45 @@
 </template>
 
 <script>
+export default {
+    data() {
+        return {
+            userName: ''
+        }
+    },
+    methods: {
+        async getUserName() {
+            const storedUser = JSON.parse(localStorage.getItem('user'));
+            const userId = storedUser?.id;
+
+            if (!userId) return;
+
+            const userType = storedUser?.type;
+
+            try {
+                let response, data;
+                if (userType === 'patient') {
+                    response = await fetch(`https://059.uz/api/user/patient?user_id=${userId}`);
+                } else if (userType === 'doctor') {
+                    response = await fetch(`https://059.uz/api/user/doctor?user_id=${userId}`);
+                }
+
+                if (response.ok) {
+                    data = await response.json();
+                    this.userName = data.name || '';
+                } else {
+                    console.error('Ошибка HTTP:', response.status);
+                }
+            } catch (error) {
+                console.error('Ошибка при загрузке данных', error);
+            }
+        }
+    },
+    mounted() {
+        this.getUserName();
+    }
+}
+
+
 
 </script>

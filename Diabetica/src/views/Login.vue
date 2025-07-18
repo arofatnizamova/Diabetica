@@ -62,11 +62,10 @@ export default {
                 })
                 const result = await response.json();
 
-                if (result && result.token && result.user) {
+                if (result && result.user) {
                     localStorage.setItem('user', JSON.stringify({
                         id: result.user.id,
                         type: result.user.role === 'P' ? 'patient' : 'doctor',
-                        token: result.token
                     }));
 
                     this.$router.push('/');

@@ -4,7 +4,7 @@
             <!-- info -->
             <InfoCard title="Инсулин и лекарства" subtitle="Управляйте приемом лекарств и инсулина" :image="imageSrc" />
         </div>
-        <div class="col-xxl-5 col-lg-6">
+        <!-- <div class="col-xxl-5 col-lg-6">
             <div class="w-100  bg-white rounded-4 mt-lg-0 card-hover p-4">
                 <form>
                     <div class="row gy-3">
@@ -32,7 +32,7 @@
                     </div>
                 </form>
             </div>
-        </div>
+        </div> -->
         <div class="col-xl-8">
             <div class="w-100 bg-white rounded-4 mt-4 card-hover p-4">
                 <div
@@ -230,83 +230,9 @@
             </div>
         </div>
         <div class="col-xl-4">
-            <div class="w-100 border p-4 bg-white rounded-4 mt-4">
-                <h3 class="text-2xl fw-semibold mb-4"><i class="fa-solid fa-bell me-2 text-corp fs-5"></i>Напоминания
-                </h3>
-                <div class="border rounded-4 p-3 mb-3 d-flex align-items-center justify-content-between">
-                    <div class="d-flex align-items-center gap-2">
-                        <span>💊</span>
-                        <div class="d-flex flex-column justify-content-center">
-                            <p class="text-md fw-semibold text-dark-custom mb-1">Инсулин короткий</p>
-                            <span class="text-sm text-gray fw-light"><i
-                                    class="fa-regular fa-clock me-1"></i>08:00</span>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center gap-2">
-                        <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" value="" id="checkNativeSwitch-1">
-                        </div>
-                        <button class="close-btn-custom"><i class="fa-solid fa-xmark text-gray"></i></button>
-                    </div>
-                </div>
-                <div class="border rounded-4 p-3 mb-3 d-flex align-items-center justify-content-between">
-                    <div class="d-flex align-items-center gap-2">
-                        <span>🩸</span>
-                        <div class="d-flex flex-column justify-content-center">
-                            <p class="text-md fw-semibold text-dark-custom mb-1">Измерить сахар</p>
-                            <span class="text-sm text-gray fw-light"><i
-                                    class="fa-regular fa-clock me-1"></i>13:00</span>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center gap-2">
-                        <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" value="" id="checkNativeSwitch-2">
-                        </div>
-                        <button class="close-btn-custom"><i class="fa-solid fa-xmark text-gray"></i></button>
-                    </div>
-                </div>
-                <div class="border rounded-4 p-3 mb-3 d-flex align-items-center justify-content-between">
-                    <div class="d-flex align-items-center gap-2">
-                        <span>🍽️</span>
-                        <div class="d-flex flex-column justify-content-center">
-                            <p class="text-md fw-semibold text-dark-custom mb-1">Обед</p>
-                            <span class="text-sm text-gray fw-light"><i
-                                    class="fa-regular fa-clock me-1"></i>13:00</span>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center gap-2">
-                        <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" value="" id="checkNativeSwitch-3">
-                        </div>
-                        <button class="close-btn-custom"><i class="fa-solid fa-xmark text-gray"></i></button>
-                    </div>
-                </div>
-                <button class="btn btn-white text-sm w-100 border-dashed" type="button">
-                    <i class="fa-solid fa-plus me-2"></i>
-                    <span>Добавить напоминание</span>
-                </button>
-                <div class="border-dashed p-3 rounded-3 mt-4">
-                    <form>
-                        <input type="text" class="form-control mb-3" placeholder="Название напоминания">
-                        <input type="time" class="form-control mb-3">
-                        <select name="notification_name" class="form-select text-sm mb-3" id="notification_name">
-                            <option value="2">Лекарство</option>
-                            <option value="3">Глюкоза</option>
-                            <option value="4">Питание</option>
-                        </select>
-                        <div class="d-flex align-items-center gap-2">
-                            <button type="submit" class="btn btn-primary text-sm">
-                                <span>Добавить</span>
-                            </button>
-                            <button class="btn d-flex align-items-center">
-                                <span class="fw-medium text-sm">Отмена</span>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+            <MedicineNotification />
         </div>
-        <div class="col-xl-8">
+        <!-- <div class="col-xl-8">
             <div class="w-100 bg-white rounded-4 mt-4 card-hover p-4">
                 <div class="d-flex align-items-center justify-content-between gap-3 mb-4">
                     <p class="mb-0 fw-semibold text-xl">Расписание на сегодня</p>
@@ -428,22 +354,24 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </template>
 <script>
 import InfoCard from '@/components/InfoCard.vue';
 import imageSrc from '@/assets/images/men.png'
+import MedicineNotification from '@/components/MedicineNotification.vue';
 
 export default {
     name: 'InsulineView',
     components: {
-        InfoCard
+        InfoCard,
+        MedicineNotification
     },
     data() {
         return {
-            imageSrc
-        };
+            imageSrc,
+        }
     }
 }
 </script>
