@@ -26,81 +26,102 @@
 </template>
 
 <script>
-import { renderGlucoseChart } from '@/utils/glucose-timeline'
+import { renderGlucoseChart, destroyChart } from '@/utils/glucose-timeline'
 
 export default {
-  name: 'MonthlyGlucoseChart',
-
   data() {
     return {
-      currentDate: new Date(),
+      currentDate: new Date()
     }
   },
 
   computed: {
     formattedMonth() {
-      return this.currentDate.toLocaleString('ru-RU', { month: 'long', year: 'numeric' })
+      return this.currentDate.toLocaleString('ru-RU', {
+        month: 'long',
+        year: 'numeric',
+      })
     },
   },
 
   methods: {
     prevMonth() {
-      this.currentDate = new Date(this.currentDate.getFullYear(), this.currentDate.getMonth() - 1, 1)
-      this.fetchChartData()
+      this.currentDate = new Date(
+        this.currentDate.getFullYear(),
+        this.currentDate.getMonth() - 1,
+        1
+      )
+      this.updateChart()
     },
 
     nextMonth() {
-      this.currentDate = new Date(this.currentDate.getFullYear(), this.currentDate.getMonth() + 1, 1)
-      this.fetchChartData()
+      this.currentDate = new Date(
+        this.currentDate.getFullYear(),
+        this.currentDate.getMonth() + 1,
+        1
+      )
+      this.updateChart()
     },
 
-    async fetchChartData() {
-      const year = parseInt(this.currentDate.getFullYear())
-      const month = parseInt(this.currentDate.getMonth() + 1)
-      const storedUser = JSON.parse(localStorage.getItem('user'));
-      const userId = storedUser?.id;
+    async updateChart() {
+      const year = this.currentDate.getFullYear()
+      const month = this.currentDate.getMonth() + 1
 
-      if (!userId) return;
+      const storedUser = JSON.parse(localStorage.getItem('user'))
+      const userId = storedUser?.id
+      if (!userId) return
+
+      const url = new URL('https://059.uz/api/glucose/graph')
+      url.searchParams.set('user_id', userId)
+      url.searchParams.set('year', year)
+      url.searchParams.set('month', month)
 
       try {
-
-        const url = `https://059.uz/api/glucose/graph?user_id=${userId}`
-
         const response = await fetch(url)
-        const rawText = await response.text()
-
         if (!response.ok) {
-          throw new Error(`Ошибка HTTP: ${response.status}`)
+          throw new Error(`HTTP error! status: ${response.status}`)
         }
 
-        const data = JSON.parse(rawText)
+        const data = await response.json()
 
         const labels = []
         const totalData = []
         const avgGlucoseData = []
 
         const daysInMonth = new Date(year, month, 0).getDate()
+
         for (let day = 1; day <= daysInMonth; day++) {
           labels.push(day)
-          const entry = data.find(item => new Date(item.date).getDate() === day)
+          const entry = data.find((item) => {
+            const date = new Date(item.date)
+            return date.getFullYear() === year &&
+              date.getMonth() + 1 === month &&
+              date.getDate() === day
+          })
+
           totalData.push(entry?.total || 0)
           avgGlucoseData.push(entry?.count || 0)
         }
 
+        destroyChart('glucoseChart')
+
+
         renderGlucoseChart('glucoseChart', labels, [
           { name: 'Частота измерений', data: totalData },
-          { name: 'Средняя глюкоза', data: avgGlucoseData }
+          { name: 'Средняя глюкоза', data: avgGlucoseData },
         ])
       } catch (error) {
-        console.error('Ошибка при загрузке данных:', error)
+        console.error('Ошибка при загрузке графика:', error)
       }
-    }
-
-
+    },
   },
 
   mounted() {
-    this.fetchChartData()
+    this.updateChart()
   },
+
+  beforeUnmount() {
+    destroyChart('glucoseChart')
+  }
 }
 </script>

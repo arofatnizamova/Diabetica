@@ -1,6 +1,14 @@
 import ApexCharts from 'apexcharts';
 
+const chartInstances = new Map(); 
+
 export function renderGlucoseChart(containerId, labels, seriesData) {
+
+    if (chartInstances.has(containerId)) {
+        chartInstances.get(containerId).destroy();
+        chartInstances.delete(containerId);
+    }
+
     const options = {
         chart: {
             type: 'line',
@@ -57,35 +65,53 @@ export function renderGlucoseChart(containerId, labels, seriesData) {
                 style: { fontSize: '11px' }
             }
         },
-        responsive: [{
-            breakpoint: 1440,
-            options: {
-                legend: {
-                    position: 'bottom',
-                    horizontalAlign: 'center'
-                },
-            }
-        }, {
-            breakpoint: 576,
-            options: {
-                legend: {
-                    position: 'bottom',
-                    horizontalAlign: 'center'
-                },
-                chart: { height: 180 },
-                markers: { size: 4 },
-                stroke: { width: 1.5 },
-                xaxis: {
-                    labels: { style: { fontSize: '9px' } }
-                },
-                yaxis: {
-                    labels: { style: { fontSize: '9px' } }
+        responsive: [
+            {
+                breakpoint: 1440,
+                options: {
+                    legend: {
+                        position: 'bottom',
+                        horizontalAlign: 'center'
+                    },
+                }
+            },
+            {
+                breakpoint: 576,
+                options: {
+                    legend: {
+                        position: 'bottom',
+                        horizontalAlign: 'center'
+                    },
+                    chart: { height: 180 },
+                    markers: { size: 4 },
+                    stroke: { width: 1.5 },
+                    xaxis: {
+                        labels: { style: { fontSize: '9px' } }
+                    },
+                    yaxis: {
+                        labels: { style: { fontSize: '9px' } }
+                    }
                 }
             }
-        }],
+        ],
         series: seriesData
     };
 
     const chart = new ApexCharts(document.querySelector(`#${containerId}`), options);
     chart.render();
+
+    chartInstances.set(containerId, chart); 
+}
+
+export function destroyChart(containerId) {
+    if (chartInstances.has(containerId)) {
+        const chart = chartInstances.get(containerId);
+        chart.destroy();
+        chartInstances.delete(containerId);
+
+        const container = document.querySelector(`#${containerId}`);
+        if (container) {
+            container.innerHTML = '';
+        }
+    }
 }
